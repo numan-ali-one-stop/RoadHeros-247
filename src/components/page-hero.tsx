@@ -22,7 +22,7 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "bg-grid-pattern relative overflow-hidden bg-charcoal-950 pt-32 pb-16 sm:pt-40 sm:pb-20",
+        "bg-grid-pattern relative overflow-hidden bg-background pt-32 pb-16 sm:pt-40 sm:pb-20",
         className,
       )}
     >
@@ -32,20 +32,22 @@ export function PageHero({
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-charcoal-950"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background"
       />
       <Container className="relative">
         <FadeIn className="flex max-w-2xl flex-col gap-4">
           {eyebrow ? (
-            <span className="text-teal-300 text-xs font-semibold tracking-[0.18em] uppercase">
+            <span className="text-primary text-xs font-semibold tracking-[0.18em] uppercase">
               {eyebrow}
             </span>
           ) : null}
-          <h1 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
+          <h1 className="text-foreground text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
             {title}
           </h1>
           {subtitle ? (
-            <p className="text-lg text-balance text-white/70">{subtitle}</p>
+            <p className="text-foreground/70 text-lg text-balance">
+              {subtitle}
+            </p>
           ) : null}
           {children}
         </FadeIn>

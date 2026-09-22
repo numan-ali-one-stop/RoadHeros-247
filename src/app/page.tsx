@@ -1,50 +1,50 @@
 import type { Metadata } from "next";
 
+import { AreasCovered } from "@/components/home/areas-covered";
+import { ContentSections } from "@/components/content-sections";
 import { CtaBand } from "@/components/cta-band";
-import { FadeIn } from "@/components/motion/fade-in";
+import { FaqSection } from "@/components/faq-section";
 import { Hero } from "@/components/home/hero";
-import { Section } from "@/components/layout/section";
-import { LogoStrip } from "@/components/logo-strip";
-import { SectionHeading } from "@/components/section-heading";
-import { ServiceCard } from "@/components/service-card";
-import { StatsBand } from "@/components/stats-band";
+import { OurServices } from "@/components/home/our-services";
+import { Process } from "@/components/home/process";
 import { Testimonials } from "@/components/testimonials";
 import { WhyUs } from "@/components/why-us";
-import { services } from "@/lib/site";
+import {
+  closingLandingSections,
+  coreLandingSections,
+  homeFaqs,
+  locationLandingSections,
+  secondaryLandingSections,
+} from "@/lib/home-landing";
 
 export const metadata: Metadata = {
-  title: "Mobile Tyre Fitting & Roadside Assistance, 24/7",
+  title: "Mobile Tyre Service Manchester | Road Heroes 24/7",
   description:
-    "RoadHeros 24/7 brings mobile tyre fitting, home tyre fitting, jump starts and locking nut removal straight to you, day or night.",
+    "Reliable mobile tyre fitting, repair and replacement across Manchester. Road Heroes 24/7 brings professional tyre assistance to your home, workplace or a suitable roadside location.",
 };
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <LogoStrip />
-
-      <Section>
-        <SectionHeading
-          eyebrow="What we do"
-          title="Four ways we get you moving again"
-          subtitle="Whatever's stopped you, one call gets a fully-equipped fitter heading your way."
-          align="center"
-          className="mb-12"
-        />
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
-            <FadeIn key={service.slug} delay={index * 0.08} fullWidth>
-              <ServiceCard service={service} />
-            </FadeIn>
-          ))}
-        </div>
-      </Section>
-
+      <ContentSections sections={coreLandingSections} />
+      <OurServices />
       <WhyUs />
-      <StatsBand />
+      <ContentSections sections={locationLandingSections} />
+      <AreasCovered />
+      <ContentSections sections={secondaryLandingSections} />
+      <Process />
       <Testimonials />
-      <CtaBand />
+      <ContentSections sections={closingLandingSections} />
+      <FaqSection
+        title="Frequently Asked Questions"
+        subtitle="Can't find what you need? Give us a call and we'll talk you through it."
+        faqs={homeFaqs}
+      />
+      <CtaBand
+        title="Get Mobile Tyre Assistance In Manchester"
+        subtitle="Need a tyre fitted or replaced? Road Heroes 24/7 provides mobile tyre assistance across Manchester and suitable surrounding areas. Whether you're at home, at work or dealing with a tyre problem at a suitable roadside location, contact us to discuss your tyre requirements."
+      />
     </>
   );
 }

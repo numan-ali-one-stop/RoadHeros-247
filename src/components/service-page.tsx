@@ -18,11 +18,7 @@ export function ServicePage({ service }: { service: ServiceDetail }) {
     <>
       <PageHero eyebrow="Service" title={service.name} subtitle={service.heroDescription}>
         <div className="flex flex-col gap-3 pt-2 sm:flex-row">
-          <Button
-            size="lg"
-            render={<a href={siteConfig.phoneHref} />}
-            className="bg-white text-charcoal-950 hover:bg-white/90"
-          >
+          <Button size="lg" render={<a href={siteConfig.phoneHref} />}>
             <Phone className="size-4" aria-hidden="true" />
             Call {siteConfig.phone}
           </Button>
@@ -30,7 +26,6 @@ export function ServicePage({ service }: { service: ServiceDetail }) {
             size="lg"
             variant="outline"
             render={<Link href="/contact" />}
-            className="border-white/25 bg-transparent text-white hover:bg-white/10 hover:text-white"
           >
             Get a free quote
           </Button>

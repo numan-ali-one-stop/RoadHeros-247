@@ -28,7 +28,7 @@ function isRouteActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export function MobileNav({ tone }: { tone: "light" | "dark" }) {
+export function MobileNav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -40,11 +40,7 @@ export function MobileNav({ tone }: { tone: "light" | "dark" }) {
             variant="ghost"
             size="icon"
             aria-label="Open menu"
-            className={cn(
-              tone === "dark"
-                ? "text-white hover:bg-white/10 hover:text-white"
-                : "text-foreground",
-            )}
+            className="text-foreground"
           />
         }
       >

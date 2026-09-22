@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { siteConfig, services } from "@/lib/site";
 
-export function ServicesMenu({ tone }: { tone: "light" | "dark" }) {
+export function ServicesMenu() {
   const pathname = usePathname();
   const isActive = pathname.startsWith("/services");
 
@@ -24,11 +24,8 @@ export function ServicesMenu({ tone }: { tone: "light" | "dark" }) {
         delay={100}
         closeDelay={150}
         className={cn(
-          "group inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium transition-colors outline-none focus-visible:ring-2",
-          tone === "dark"
-            ? "text-white/85 hover:text-white focus-visible:ring-white/60 data-popup-open:text-white"
-            : "text-foreground/75 hover:text-foreground focus-visible:ring-ring data-popup-open:text-foreground",
-          isActive && (tone === "dark" ? "text-white" : "text-foreground"),
+          "group text-foreground/75 hover:text-foreground data-popup-open:text-foreground focus-visible:ring-ring inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium transition-colors outline-none focus-visible:ring-2",
+          isActive && "text-foreground",
         )}
       >
         Services

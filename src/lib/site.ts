@@ -14,15 +14,15 @@ function normalizeUrl(url: string): string {
 }
 
 export const siteConfig = {
-  name: "RoadHeros 24/7",
-  shortName: "RoadHeros",
+  name: "Road Heroes 24/7",
+  shortName: "Road Heroes",
   description:
-    "24/7 mobile tyre fitting and roadside assistance across the region. Punctures, jump starts and locking nut removal — we come to you, day or night.",
+    "24/7 mobile tyre service across Manchester. Mobile tyre fitting, emergency tyre replacement and roadside tyre assistance — we come to you, day or night.",
   url: normalizeUrl(process.env.NEXT_PUBLIC_SITE_URL ?? DEFAULT_SITE_URL),
   phone: "0800 555 0124",
   phoneHref: "tel:+448005550124",
-  email: "help@roadheros247.co.uk",
-  address: "Unit 4, Foundry Business Park, Sheffield, S9 1AT",
+  email: "help@roadheroes247.co.uk",
+  address: "Unit 4, Foundry Business Park, Manchester, M1 2AB",
   hours: "Callouts available 24 hours a day, 7 days a week",
 } as const;
 

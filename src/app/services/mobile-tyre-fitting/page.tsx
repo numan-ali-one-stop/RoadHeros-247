@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: service.name,
   description: service.heroDescription,
   openGraph: {
-    title: `${service.name} | RoadHeros 24/7`,
+    title: `${service.name} | Road Heroes 24/7`,
     description: service.heroDescription,
   },
 };

@@ -2,12 +2,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 import { Container } from "@/components/layout/container";
-import {
-  brandIcon as BrandIcon,
-  services,
-  siteConfig,
-  socialLinks,
-} from "@/lib/site";
+import { brandIcon as BrandIcon, siteConfig, socialLinks } from "@/lib/site";
 
 const companyLinks = [
   { label: "About us", href: "/about" },
@@ -15,12 +10,29 @@ const companyLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
+const footerServiceLinks = [
+  { label: "Mobile Tyre Service Manchester", href: "/#mobile-tyre-service-manchester" },
+  { label: "Mobile Tyre Fitting Manchester", href: "/#mobile-tyre-fitting-manchester" },
+  {
+    label: "Emergency Mobile Tyre Fitting Manchester",
+    href: "/#emergency-mobile-tyre-fitting-manchester",
+  },
+  {
+    label: "Mobile Tyre Replacement Manchester",
+    href: "/#mobile-tyre-replacement-manchester",
+  },
+  {
+    label: "24 Hour Mobile Tyre Service Manchester",
+    href: "/#24-hour-mobile-tyre-service-manchester",
+  },
+];
+
 export function SiteFooter() {
   return (
-    <footer className="bg-charcoal-950 text-charcoal-200 border-t border-white/10">
+    <footer className="bg-secondary text-secondary-foreground border-border border-t">
       <Container className="grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] lg:py-16">
         <div className="flex flex-col gap-4">
-          <Link href="/" className="flex items-center gap-2 text-white">
+          <Link href="/" className="text-secondary-foreground flex items-center gap-2">
             <span className="bg-primary/20 flex size-9 items-center justify-center rounded-full">
               <BrandIcon className="text-primary size-4.5" aria-hidden="true" />
             </span>
@@ -28,8 +40,8 @@ export function SiteFooter() {
               {siteConfig.name}
             </span>
           </Link>
-          <p className="max-w-xs text-sm text-white/60">
-            {siteConfig.description}
+          <p className="text-secondary-foreground/60 max-w-xs text-sm">
+            Professional mobile tyre assistance across Manchester.
           </p>
           <div className="flex items-center gap-2 pt-2">
             {socialLinks.map((social) => (
@@ -39,7 +51,7 @@ export function SiteFooter() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={social.label}
-                className="flex size-9 items-center justify-center rounded-full bg-white/5 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+                className="bg-foreground/5 text-secondary-foreground/70 hover:bg-foreground/10 hover:text-secondary-foreground flex size-9 items-center justify-center rounded-full transition-colors"
               >
                 <social.icon className="size-4" aria-hidden="true" />
               </a>
@@ -48,13 +60,15 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-3">
-          <h3 className="text-sm font-semibold text-white">Company</h3>
+          <h3 className="text-secondary-foreground text-sm font-semibold">
+            Company
+          </h3>
           <ul className="flex flex-col gap-2.5">
             {companyLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-white/60 transition-colors hover:text-white"
+                  className="text-secondary-foreground/60 hover:text-secondary-foreground text-sm transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -64,15 +78,17 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-3">
-          <h3 className="text-sm font-semibold text-white">Services</h3>
+          <h3 className="text-secondary-foreground text-sm font-semibold">
+            Services
+          </h3>
           <ul className="flex flex-col gap-2.5">
-            {services.map((service) => (
-              <li key={service.slug}>
+            {footerServiceLinks.map((link) => (
+              <li key={link.href}>
                 <Link
-                  href={`/services/${service.slug}`}
-                  className="text-sm text-white/60 transition-colors hover:text-white"
+                  href={link.href}
+                  className="text-secondary-foreground/60 hover:text-secondary-foreground text-sm transition-colors"
                 >
-                  {service.name}
+                  {link.label}
                 </Link>
               </li>
             ))}
@@ -80,12 +96,14 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-3">
-          <h3 className="text-sm font-semibold text-white">Get in touch</h3>
+          <h3 className="text-secondary-foreground text-sm font-semibold">
+            Get in touch
+          </h3>
           <ul className="flex flex-col gap-3">
             <li>
               <a
                 href={siteConfig.phoneHref}
-                className="flex items-start gap-2.5 text-sm text-white/60 transition-colors hover:text-white"
+                className="text-secondary-foreground/60 hover:text-secondary-foreground flex items-start gap-2.5 text-sm transition-colors"
               >
                 <Phone className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
                 {siteConfig.phone}
@@ -94,13 +112,13 @@ export function SiteFooter() {
             <li>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="flex items-start gap-2.5 text-sm text-white/60 transition-colors hover:text-white"
+                className="text-secondary-foreground/60 hover:text-secondary-foreground flex items-start gap-2.5 text-sm transition-colors"
               >
                 <Mail className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
                 {siteConfig.email}
               </a>
             </li>
-            <li className="flex items-start gap-2.5 text-sm text-white/60">
+            <li className="text-secondary-foreground/60 flex items-start gap-2.5 text-sm">
               <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
               {siteConfig.address}
             </li>
@@ -108,8 +126,8 @@ export function SiteFooter() {
         </div>
       </Container>
 
-      <div className="border-t border-white/10">
-        <Container className="flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/50 sm:flex-row">
+      <div className="border-border border-t">
+        <Container className="text-secondary-foreground/50 flex flex-col items-center justify-between gap-3 py-6 text-xs sm:flex-row">
           <p>
             © {new Date().getFullYear()} {siteConfig.name}. All rights
             reserved.

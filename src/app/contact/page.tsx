@@ -11,11 +11,11 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with RoadHeros 24/7 for a quote, a callout, or a question about our mobile tyre fitting and roadside assistance services.",
+    "Get in touch with Road Heroes 24/7 for a quote, a callout, or a question about our mobile tyre fitting and roadside assistance services.",
   openGraph: {
-    title: "Contact | RoadHeros 24/7",
+    title: "Contact | Road Heroes 24/7",
     description:
-      "Get in touch with RoadHeros 24/7 for a quote, a callout, or a question about our mobile tyre fitting and roadside assistance services.",
+      "Get in touch with Road Heroes 24/7 for a quote, a callout, or a question about our mobile tyre fitting and roadside assistance services.",
   },
 };
 

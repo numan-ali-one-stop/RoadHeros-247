@@ -4,17 +4,10 @@ import Link from "next/link";
 import { FadeIn } from "@/components/motion/fade-in";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
+import { aboutHero } from "@/lib/about-content";
 import { siteConfig } from "@/lib/site";
 
-const heroKeywords = [
-  "Mobile Tyre Service Manchester",
-  "Mobile Tyre Fitting Manchester",
-  "Emergency Mobile Tyre Fitting Manchester",
-  "Mobile Tyre Replacement Manchester",
-  "24 Hour Mobile Tyre Service Manchester",
-];
-
-export function Hero() {
+export function AboutHero() {
   return (
     <section className="bg-grid-pattern relative overflow-hidden bg-background pt-32 pb-20 sm:pt-44 sm:pb-28">
       <div
@@ -33,20 +26,13 @@ export function Hero() {
         <FadeIn className="flex flex-col gap-6">
           <span className="bg-foreground/10 text-foreground/80 ring-foreground/15 inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium ring-1">
             <span className="bg-primary size-1.5 animate-pulse rounded-full" />
-            Mobile tyre fitters covering Manchester, 24/7
+            {aboutHero.badge}
           </span>
           <h1 className="text-foreground max-w-3xl font-heading text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            Mobile Tyre Service Manchester{" "}
-            <span className="text-foreground/50">| Road Heroes 24/7</span>
+            {aboutHero.title}
           </h1>
           <p className="text-foreground/70 max-w-xl text-lg text-balance">
-            Reliable mobile tyre fitting, repair and replacement across
-            Manchester. We bring professional tyre assistance to your home,
-            workplace or a suitable roadside location.
-          </p>
-          <p className="text-foreground/60 max-w-xl text-balance">
-            Road Heroes 24/7 makes tyre fitting simple, convenient and
-            accessible when you need it.
+            {aboutHero.tagline}
           </p>
         </FadeIn>
 
@@ -54,16 +40,16 @@ export function Hero() {
           delay={0.08}
           className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2.5"
         >
-          {heroKeywords.map((keyword) => (
+          {aboutHero.points.map((point) => (
             <div
-              key={keyword}
+              key={point}
               className="text-foreground/70 flex items-center gap-2 text-sm"
             >
               <CheckCircle2
                 className="text-primary size-4 shrink-0"
                 aria-hidden="true"
               />
-              {keyword}
+              {point}
             </div>
           ))}
         </FadeIn>
@@ -71,7 +57,7 @@ export function Hero() {
         <FadeIn delay={0.16} className="flex flex-col gap-3 sm:flex-row">
           <Button size="lg" render={<a href={siteConfig.phoneHref} />}>
             <Phone className="size-4" aria-hidden="true" />
-            Get Mobile Tyre Assistance Today
+            {aboutHero.cta}
           </Button>
           <Button
             size="lg"

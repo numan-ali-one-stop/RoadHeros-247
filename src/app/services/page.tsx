@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Mobile tyre fitting, home tyre fitting, jump starts and locking nut removal — 24/7 roadside assistance that comes to you.",
   openGraph: {
-    title: "Services | RoadHeros 24/7",
+    title: "Services | Road Heroes 24/7",
     description:
       "Mobile tyre fitting, home tyre fitting, jump starts and locking nut removal — 24/7 roadside assistance that comes to you.",
   },

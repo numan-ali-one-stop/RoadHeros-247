@@ -1,33 +1,32 @@
 import { FadeIn } from "@/components/motion/fade-in";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/section-heading";
-import { whyUsFeatures, whyUsIntro } from "@/lib/content";
+import { whoWeLookAfter, whoWeLookAfterTitle } from "@/lib/about-content";
 
-export function WhyUs() {
+export function WhoWeLookAfter() {
   return (
-    <Section className="bg-secondary/40">
+    <Section>
       <SectionHeading
-        eyebrow="Why Road Heroes 24/7"
-        title="Why Choose Road Heroes 24/7?"
-        subtitle={whyUsIntro}
+        eyebrow="Who We Help"
+        title={whoWeLookAfterTitle}
         align="center"
         className="mb-12"
       />
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {whyUsFeatures.map((feature, index) => (
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        {whoWeLookAfter.map((audience, index) => (
           <FadeIn
-            key={feature.title}
+            key={audience.title}
             delay={index * 0.08}
             className="border-border bg-card flex flex-col gap-3 rounded-2xl border p-6"
           >
             <div className="bg-primary/10 text-primary flex size-11 items-center justify-center rounded-xl">
-              <feature.icon className="size-5" aria-hidden="true" />
+              <audience.icon className="size-5" aria-hidden="true" />
             </div>
             <h3 className="font-heading text-base font-semibold tracking-tight">
-              {feature.title}
+              {audience.title}
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              {feature.description}
+              {audience.description}
             </p>
           </FadeIn>
         ))}

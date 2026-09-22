@@ -69,7 +69,7 @@ Components land in `src/components/ui`.
    `vercel.json` (`framework: "nextjs"`) automatically.
 3. In the Vercel project's **Environment Variables**, set
    `NEXT_PUBLIC_SITE_URL` to your production URL (e.g.
-   `https://roadheros247.com`) for Production (and Preview, if you want
+   `https://roadheroes247.co.uk`) for Production (and Preview, if you want
    preview deploys to use a distinct URL). This is the single variable that
    drives metadata, `sitemap.ts`, and `robots.ts` — no code changes needed
    when you change domains.
