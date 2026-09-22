@@ -18,7 +18,7 @@ export const siteConfig = {
   shortName: "Road Heroes",
   description:
     "24/7 mobile tyre service across Manchester. Mobile tyre fitting, emergency tyre replacement and roadside tyre assistance — we come to you, day or night.",
-  url: normalizeUrl(process.env.NEXT_PUBLIC_SITE_URL ?? DEFAULT_SITE_URL),
+  url: normalizeUrl(process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL),
   phone: "0800 555 0124",
   phoneHref: "tel:+448005550124",
   email: "help@roadheroes247.co.uk",
