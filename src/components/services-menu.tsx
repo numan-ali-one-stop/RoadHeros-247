@@ -15,7 +15,9 @@ import { siteConfig, services } from "@/lib/site";
 
 export function ServicesMenu() {
   const pathname = usePathname();
-  const isActive = pathname.startsWith("/services");
+  const isActive =
+    pathname.startsWith("/services") ||
+    services.some((service) => service.href && pathname.startsWith(service.href));
 
   return (
     <DropdownMenu>
@@ -55,7 +57,7 @@ export function ServicesMenu() {
           {services.map((service) => (
             <DropdownMenuItem
               key={service.slug}
-              render={<Link href={`/services/${service.slug}`} />}
+              render={<Link href={service.href ?? `/services/${service.slug}`} />}
               className="flex h-auto items-start gap-3 rounded-xl p-3"
             >
               <span className="bg-primary/10 text-primary flex size-9 shrink-0 items-center justify-center rounded-lg">

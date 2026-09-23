@@ -8,7 +8,6 @@ import {
   ListChecks,
   Lock,
   ShieldCheck,
-  Truck,
   Wrench,
 } from "lucide-react";
 
@@ -35,83 +34,6 @@ export type ServiceDetail = {
 };
 
 export const serviceDetails: ServiceDetail[] = [
-  {
-    slug: "mobile-tyre-fitting",
-    name: "Mobile Tyre Fitting",
-    shortDescription: "Puncture or blowout? A fitter comes to your location.",
-    heroDescription:
-      "Stuck on the hard shoulder, in a car park, or outside the office with a dead tyre? Our mobile fitters carry a full range of stock and come straight to you — no towing, no waiting room, no wasted afternoon.",
-    icon: Truck,
-    included: [
-      "Fully equipped van with a wide range of tyre sizes and brands in stock",
-      "On-the-spot puncture repair where it's safe and legal to do so",
-      "New tyre supply and fitting at the roadside, at home, or at work",
-      "Wheel balancing and torque-to-spec after every fit",
-      "Old tyre disposal handled for you",
-      "Nitrogen or air top-up on request",
-    ],
-    process: [
-      {
-        title: "Call or book online",
-        description:
-          "Tell us your tyre size, location and vehicle details. We'll quote you a price and an arrival window before you confirm.",
-      },
-      {
-        title: "We dispatch the nearest fitter",
-        description:
-          "Our routing sends the closest fully-stocked van, and you get a live ETA by text.",
-      },
-      {
-        title: "Fitted on the spot",
-        description:
-          "Your fitter repairs or replaces the tyre, balances the wheel, and torques it to manufacturer spec.",
-      },
-      {
-        title: "Back on the road",
-        description:
-          "You get a digital receipt and a written note of what was done, including tread depth and pressure checks on the other three tyres.",
-      },
-    ],
-    tools: [
-      {
-        name: "Mobile balancing rig",
-        description: "Van-mounted wheel balancer for a smooth, vibration-free ride.",
-        icon: Gauge,
-      },
-      {
-        name: "Torque-calibrated tools",
-        description: "Every wheel nut is torqued to the exact manufacturer spec.",
-        icon: Wrench,
-      },
-      {
-        name: "Tyre pressure monitoring reset",
-        description: "TPMS sensors are checked and reset where fitted.",
-        icon: ShieldCheck,
-      },
-    ],
-    faqs: [
-      {
-        question: "How quickly can someone reach me?",
-        answer:
-          "Most callouts are attended within 60–90 minutes, and often sooner in urban areas. You'll get a live ETA once you book.",
-      },
-      {
-        question: "Do you carry my tyre size?",
-        answer:
-          "Our vans stock the most common sizes and brands. If yours is unusual, we'll confirm availability on the phone before dispatching so there's no wasted trip.",
-      },
-      {
-        question: "Can you fit run-flats or performance tyres?",
-        answer:
-          "Yes — our fitters carry equipment for run-flats, low-profile and performance fitments as standard.",
-      },
-      {
-        question: "Is it safe to wait roadside while you fit the tyre?",
-        answer:
-          "Your safety comes first. If your location isn't safe to work at, we'll talk you through moving somewhere safer, or advise on a short tow to a nearby safe spot.",
-      },
-    ],
-  },
   {
     slug: "home-tyre-fitting",
     name: "Home Tyre Fitting",

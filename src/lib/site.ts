@@ -43,6 +43,8 @@ export type ServiceSummary = {
   name: string;
   shortDescription: string;
   icon: LucideIcon;
+  /** Overrides the default `/services/{slug}` link when the service has its own dedicated landing page. */
+  href?: string;
 };
 
 export const services: ServiceSummary[] = [
@@ -51,6 +53,7 @@ export const services: ServiceSummary[] = [
     name: "Mobile Tyre Fitting",
     shortDescription: "Puncture or blowout? A fitter comes to your location.",
     icon: Truck,
+    href: "/mobile-tyre-fitting-manchester",
   },
   {
     slug: "home-tyre-fitting",

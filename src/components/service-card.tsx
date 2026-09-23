@@ -20,7 +20,7 @@ export function ServiceCard({ service }: { service: ServiceSummary }) {
           </p>
         </div>
         <Link
-          href={`/services/${service.slug}`}
+          href={service.href ?? `/services/${service.slug}`}
           className="text-primary inline-flex items-center gap-1 text-sm font-medium"
         >
           Learn more

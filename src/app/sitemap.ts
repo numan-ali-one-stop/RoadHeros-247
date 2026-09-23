@@ -13,10 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const serviceRoutes: MetadataRoute.Sitemap = services.map((service) => ({
-    url: `${siteConfig.url}/services/${service.slug}`,
+    url: `${siteConfig.url}${service.href ?? `/services/${service.slug}`}`,
     lastModified: now,
     changeFrequency: "monthly",
-    priority: 0.8,
+    priority: service.href ? 0.9 : 0.8,
   }));
 
   return [...staticRoutes, ...serviceRoutes];

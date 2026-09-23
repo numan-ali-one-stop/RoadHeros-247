@@ -6,9 +6,18 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "placehold.co",
+        hostname: "images.unsplash.com",
       },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/services/mobile-tyre-fitting",
+        destination: "/mobile-tyre-fitting-manchester",
+        permanent: true,
+      },
+    ];
   },
 };
 

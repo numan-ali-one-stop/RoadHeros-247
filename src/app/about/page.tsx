@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 import { AboutFinalCta } from "@/components/about/about-final-cta";
-import { AboutHero } from "@/components/about/about-hero";
 import { AboutTestimonials } from "@/components/about/about-testimonials";
 import { AboutValues } from "@/components/about/about-values";
 import { WhereWeWork } from "@/components/about/where-we-work";
 import { WhoWeLookAfter } from "@/components/about/who-we-look-after";
 import { ContentSections } from "@/components/content-sections";
 import { FaqSection } from "@/components/faq-section";
+import { LandingHero } from "@/components/landing-hero";
 import {
   aboutFaqs,
   aboutFaqsTitle,
@@ -15,6 +15,7 @@ import {
   aboutSectionsPrimary,
   aboutSectionsSecondary,
 } from "@/lib/about-content";
+import { siteConfig } from "@/lib/site";
 
 const pageTitle = aboutHero.title;
 
@@ -30,7 +31,16 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <AboutHero />
+      <LandingHero
+        badge={aboutHero.badge}
+        title={aboutHero.title}
+        paragraphs={[aboutHero.tagline]}
+        points={aboutHero.points}
+        buttons={[
+          { label: aboutHero.cta, href: siteConfig.phoneHref },
+          { label: "Get a free quote", href: "/contact", variant: "outline" },
+        ]}
+      />
       <ContentSections sections={aboutSectionsPrimary} />
       <AboutValues />
       <WhoWeLookAfter />

@@ -53,7 +53,9 @@ export function MobileNav() {
         <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-2">
           {navLinks.map((link) => {
             if (link.label === "Services") {
-              const active = isRouteActive(pathname, "/services");
+              const active =
+                isRouteActive(pathname, "/services") ||
+                services.some((service) => service.href && pathname.startsWith(service.href));
               return (
                 <Accordion key={link.href} className="w-full">
                   <AccordionItem value="services" className="border-none">
@@ -68,7 +70,7 @@ export function MobileNav() {
                     <AccordionContent className="pb-1 pl-1 [&_a]:no-underline">
                       <div className="flex flex-col gap-1">
                         {services.map((service) => {
-                          const serviceHref = `/services/${service.slug}`;
+                          const serviceHref = service.href ?? `/services/${service.slug}`;
                           const serviceActive = pathname === serviceHref;
                           return (
                             <SheetClose

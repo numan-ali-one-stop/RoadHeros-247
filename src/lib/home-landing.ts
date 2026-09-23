@@ -21,7 +21,7 @@ export const homeLandingSections: HomeLandingSection[] = [
       "Whether you need a new tyre fitted, a damaged tyre replaced or emergency assistance, our service is designed to make the process straightforward.",
     ],
     image: {
-      src: "https://placehold.co/1200x900/1c2530/ffffff.png?text=Mobile+Tyre+Service+Manchester",
+      src: "https://images.unsplash.com/photo-1647292882945-d5c839432d7e?fm=jpg&q=80&w=1200&fit=crop",
       alt: "Placeholder image — Road Heroes 24/7 mobile tyre service in Manchester",
     },
   },
@@ -48,7 +48,7 @@ export const homeLandingSections: HomeLandingSection[] = [
     closingParagraph:
       "Our aim is to make tyre fitting more convenient while keeping the service professional and focused on your vehicle requirements.",
     image: {
-      src: "https://placehold.co/1200x900/1c2530/ffffff.png?text=Mobile+Tyre+Fitting+Manchester",
+      src: "https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?fm=jpg&q=80&w=1200&fit=crop",
       alt: "Placeholder image — Road Heroes 24/7 mobile tyre fitting in Manchester",
     },
   },
@@ -74,7 +74,7 @@ export const homeLandingSections: HomeLandingSection[] = [
     ],
     note: "If your vehicle is stopped on a busy or unsafe road, prioritise your safety and move to a safe location where possible.",
     image: {
-      src: "https://placehold.co/1200x900/1c2530/ffffff.png?text=Emergency+Mobile+Tyre+Fitting",
+      src: "https://images.unsplash.com/photo-1599082267768-4815b2ea6bd2?fm=jpg&q=80&w=1200&fit=crop",
       alt: "Placeholder image — Road Heroes 24/7 emergency mobile tyre fitting in Manchester",
     },
   },
@@ -99,7 +99,7 @@ export const homeLandingSections: HomeLandingSection[] = [
     closingParagraph:
       "Providing your vehicle registration or tyre size can help us understand your tyre requirements and identify suitable replacement options.",
     image: {
-      src: "https://placehold.co/1200x900/1c2530/ffffff.png?text=Mobile+Tyre+Replacement+Manchester",
+      src: "https://images.unsplash.com/photo-1608479746923-7e17632a9799?fm=jpg&q=80&w=1200&fit=crop",
       alt: "Placeholder image — Road Heroes 24/7 mobile tyre replacement in Manchester",
     },
   },
@@ -116,7 +116,7 @@ export const homeLandingSections: HomeLandingSection[] = [
       "Whether you are dealing with an unexpected tyre problem or need mobile tyre fitting at a convenient time, our team can help you arrange the appropriate service.",
     ],
     image: {
-      src: "https://placehold.co/1200x900/1c2530/ffffff.png?text=24+Hour+Mobile+Tyre+Service",
+      src: "https://images.unsplash.com/photo-1763377278900-0ce8242c5005?fm=jpg&q=80&w=1200&fit=crop",
       alt: "Placeholder image — Road Heroes 24/7 24 hour mobile tyre service in Manchester",
     },
   },

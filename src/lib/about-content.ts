@@ -82,7 +82,7 @@ export const aboutSections: ContentSection[] = [
       "The work itself is straightforward. We come to your vehicle with the correct tyre already loaded, fit it, balance it, torque it and take the old one away. What people actually remember afterwards is not the tyre. It is that somebody answered the phone, gave them a straight price and turned up when they said they would.",
     ],
     image: {
-      src: "https://placehold.co/1200x900/1c2530/ffffff.png?text=Who+We+Are",
+      src: "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?fm=jpg&q=80&w=1200&fit=crop",
       alt: "Placeholder image — Road Heroes 24/7 mobile fitter at work",
     },
   },
@@ -95,7 +95,7 @@ export const aboutSections: ContentSection[] = [
       "Anyone who drives for a living in this city has a version of that story. We decided the sensible answer was to put the workshop in a van, keep real stock on board, answer the phone at any hour and quote honestly before setting off. Everything we do now still comes back to those four things.",
     ],
     image: {
-      src: "https://placehold.co/1200x900/1c2530/ffffff.png?text=Where+This+Started",
+      src: "https://images.unsplash.com/photo-1597685204565-110abf469a1e?fm=jpg&q=80&w=1200&fit=crop",
       alt: "Placeholder image — Road Heroes 24/7 origin story",
     },
   },
@@ -108,7 +108,7 @@ export const aboutSections: ContentSection[] = [
       "That reputation carried us into family cars, fleets and workplace contracts across the region. Today we run multiple vans covering the whole of Greater Manchester around the clock, and a large share of our work still arrives the same way it always did, through somebody telling somebody else that we actually turned up.",
     ],
     image: {
-      src: "https://placehold.co/1200x900/1c2530/ffffff.png?text=How+We+Have+Grown",
+      src: "https://images.unsplash.com/photo-1477823986828-5aff156284aa?fm=jpg&q=80&w=1200&fit=crop",
       alt: "Placeholder image — Road Heroes 24/7 fleet of mobile tyre vans",
     },
   },
@@ -179,7 +179,7 @@ export const aboutSections: ContentSection[] = [
       "We look for people who are calm with customers who are stressed, methodical about torque and balancing when nobody is checking, and honest enough to say a repair will do when a replacement would earn more. Those three qualities are harder to find than technical ability, and they are what the reviews end up being about.",
     ],
     image: {
-      src: "https://placehold.co/1200x900/1c2530/ffffff.png?text=The+People+Behind+The+Vans",
+      src: "https://images.unsplash.com/photo-1737984958730-edab41a34a92?fm=jpg&q=80&w=1200&fit=crop",
       alt: "Placeholder image — Road Heroes 24/7 mobile fitters",
     },
   },
