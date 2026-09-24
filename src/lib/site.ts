@@ -60,6 +60,7 @@ export const services: ServiceSummary[] = [
     name: "Home Tyre Fitting",
     shortDescription: "Book ahead and we fit new tyres on your driveway.",
     icon: Home,
+    href: "/home-tyre-fitting-manchester",
   },
   {
     slug: "jump-start",

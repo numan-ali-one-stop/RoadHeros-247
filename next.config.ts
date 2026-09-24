@@ -17,6 +17,11 @@ const nextConfig: NextConfig = {
         destination: "/mobile-tyre-fitting-manchester",
         permanent: true,
       },
+      {
+        source: "/services/home-tyre-fitting",
+        destination: "/home-tyre-fitting-manchester",
+        permanent: true,
+      },
     ];
   },
 };

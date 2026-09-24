@@ -1,15 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import {
-  BatteryCharging,
-  Car,
-  Gauge,
-  Home,
-  KeyRound,
-  ListChecks,
-  Lock,
-  ShieldCheck,
-  Wrench,
-} from "lucide-react";
+import { BatteryCharging, Car, Gauge, KeyRound, Lock, Wrench } from "lucide-react";
 
 export type ProcessStep = {
   title: string;
@@ -34,83 +24,6 @@ export type ServiceDetail = {
 };
 
 export const serviceDetails: ServiceDetail[] = [
-  {
-    slug: "home-tyre-fitting",
-    name: "Home Tyre Fitting",
-    shortDescription: "Book ahead and we fit new tyres on your driveway.",
-    heroDescription:
-      "Skip the garage waiting room. Book a slot that suits you and we'll fit your new tyres on your own driveway or in your car park — ideal for planned replacements, seasonal swaps, or fleet vehicles that can't be off the road.",
-    icon: Home,
-    included: [
-      "Pre-booked appointment window that fits your schedule",
-      "New tyres ordered and brought directly to your address",
-      "Full fitting, balancing and disposal of old tyres",
-      "Free visual brake and suspension check while we're there",
-      "Seasonal tyre swap-overs (summer/winter sets) with storage advice",
-      "Fleet and multi-vehicle bookings available",
-    ],
-    process: [
-      {
-        title: "Choose your tyres and slot",
-        description:
-          "Pick from our recommended range online or over the phone, then choose a date and time that works for you.",
-      },
-      {
-        title: "We source the stock",
-        description:
-          "Your tyres are ordered in ahead of the appointment so there's no delay on the day.",
-      },
-      {
-        title: "Fitted at your door",
-        description:
-          "A fitter arrives in your window, fits the tyres on your driveway, and balances every wheel.",
-      },
-      {
-        title: "Quick health check",
-        description:
-          "We'll flag anything else worth knowing — brake wear, alignment pull, or uneven tread — with no obligation to act on it.",
-      },
-    ],
-    tools: [
-      {
-        name: "Driveway-safe jacking equipment",
-        description: "Rated for tarmac, block paving and gravel surfaces.",
-        icon: ShieldCheck,
-      },
-      {
-        name: "Mobile balancing rig",
-        description: "The same precision balancing you'd get in a workshop.",
-        icon: Gauge,
-      },
-      {
-        name: "Digital tread & pressure gauge",
-        description: "Logged results shared with you after the visit.",
-        icon: ListChecks,
-      },
-    ],
-    faqs: [
-      {
-        question: "How far in advance should I book?",
-        answer:
-          "We can often fit you in within 2–3 days. Popular slots and seasonal swap periods (spring/autumn) book up faster, so earlier is better.",
-      },
-      {
-        question: "Do I need to be home?",
-        answer:
-          "Someone needs to be present to unlock the vehicle and confirm the job, but you're welcome to carry on with your day while we work.",
-      },
-      {
-        question: "Can you store my old tyres?",
-        answer:
-          "We can advise on seasonal storage, but we don't currently offer a storage service ourselves — we'll recycle your old tyres responsibly instead.",
-      },
-      {
-        question: "What if my driveway is on a slope?",
-        answer:
-          "Let us know when booking. Our fitters carry wheel chocks and can usually work safely on a moderate incline, or suggest a nearby flat spot.",
-      },
-    ],
-  },
   {
     slug: "jump-start",
     name: "Jump Start",
