@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { BatteryCharging, Car, Gauge, KeyRound, Lock, Wrench } from "lucide-react";
+import { KeyRound, Lock, Wrench } from "lucide-react";
 
 export type ProcessStep = {
   title: string;
@@ -24,83 +24,6 @@ export type ServiceDetail = {
 };
 
 export const serviceDetails: ServiceDetail[] = [
-  {
-    slug: "jump-start",
-    name: "Jump Start",
-    shortDescription: "Flat battery? We'll get your engine running again.",
-    heroDescription:
-      "Lights left on, a cold snap, or a battery on its last legs — a flat battery always happens at the worst time. We'll get to you fast, test the battery properly, and have you running again in minutes.",
-    icon: BatteryCharging,
-    included: [
-      "Rapid-response jump start using calibrated booster packs",
-      "Full battery health and alternator charge test",
-      "Terminal and connection check for corrosion or damage",
-      "Honest advice on whether a jump is a fix or a stopgap",
-      "Replacement battery supply and fitting on the spot if needed",
-      "Support for start-stop and hybrid vehicle battery systems",
-    ],
-    process: [
-      {
-        title: "Describe the symptoms",
-        description:
-          "Dashboard lights dim, clicking on start, or nothing at all — tell us what's happening so we bring the right kit.",
-      },
-      {
-        title: "Rapid dispatch",
-        description:
-          "A fitter with a calibrated jump pack heads straight to your location.",
-      },
-      {
-        title: "Test before we jump",
-        description:
-          "We check the battery and alternator first, so you know if this is a one-off or a sign you need a new battery.",
-      },
-      {
-        title: "Running again",
-        description:
-          "Once started, we'll let the engine run and confirm charge is holding before we leave you.",
-      },
-    ],
-    tools: [
-      {
-        name: "Calibrated booster packs",
-        description: "Safe for modern electronics, including start-stop systems.",
-        icon: BatteryCharging,
-      },
-      {
-        name: "Battery & alternator tester",
-        description: "Diagnoses the real cause, not just a temporary fix.",
-        icon: Gauge,
-      },
-      {
-        name: "Stocked replacement batteries",
-        description: "Common fitments carried on the van for same-visit swaps.",
-        icon: Car,
-      },
-    ],
-    faqs: [
-      {
-        question: "Will a jump start damage my car's electronics?",
-        answer:
-          "No — we use calibrated booster packs designed for modern vehicles, including those with start-stop and hybrid systems, which are sensitive to voltage spikes from cheap jump leads.",
-      },
-      {
-        question: "My car keeps needing jump starts — what's wrong?",
-        answer:
-          "That's usually a sign the battery is failing or something is drawing power while parked. We'll test both the battery and the alternator and explain exactly what we find.",
-      },
-      {
-        question: "Can you fit a new battery there and then?",
-        answer:
-          "In most cases, yes. Our vans carry common battery fitments, and we can supply and fit a replacement during the same callout.",
-      },
-      {
-        question: "Is a jump start safe in the rain?",
-        answer:
-          "Yes, our fitters are trained and equipped to work safely in wet weather, though we'll always prioritise finding you a sheltered spot if one's available.",
-      },
-    ],
-  },
   {
     slug: "locking-nut-removal",
     name: "Locking Nut Removal",

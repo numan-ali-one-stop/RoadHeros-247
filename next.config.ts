@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/services/jump-start",
+        destination: "/car-jump-start-manchester",
+        permanent: true,
+      },
+      {
         source: "/services/home-tyre-fitting",
         destination: "/home-tyre-fitting-manchester",
         permanent: true,

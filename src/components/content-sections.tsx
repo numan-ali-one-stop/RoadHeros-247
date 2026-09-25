@@ -4,11 +4,8 @@ import { cn } from "cn";
 
 import { FadeIn } from "@/components/motion/fade-in";
 import { Section } from "@/components/layout/section";
-import type {
-  ContentSection,
-  ContentStep,
-  ContentSubsection,
-} from "@/lib/content-sections";
+import { flattenSections } from "@/lib/content-sections";
+import type { ContentSection, ContentStep } from "@/lib/content-sections";
 
 function BulletList({
   bullets,
@@ -79,46 +76,10 @@ function ItemGrid({ items }: { items: ContentStep[] }) {
   );
 }
 
-function Subsection({
-  subsection,
-  wide,
-}: {
-  subsection: ContentSubsection;
-  wide: boolean;
-}) {
-  return (
-    <div className="border-border flex flex-col gap-4 border-t pt-8">
-      <h3 className="text-xl font-semibold tracking-tight text-balance sm:text-2xl">
-        {subsection.title}
-      </h3>
-      {subsection.paragraphs?.map((paragraph) => (
-        <p key={paragraph} className="text-muted-foreground leading-relaxed">
-          {paragraph}
-        </p>
-      ))}
-      {subsection.listIntro ? (
-        <p className="text-foreground text-sm font-semibold">
-          {subsection.listIntro}
-        </p>
-      ) : null}
-      {subsection.bullets ? (
-        <BulletList bullets={subsection.bullets} wide={wide} />
-      ) : null}
-      {subsection.steps ? <StepList steps={subsection.steps} /> : null}
-      {subsection.items ? <ItemGrid items={subsection.items} /> : null}
-      {subsection.closingParagraph ? (
-        <p className="text-muted-foreground leading-relaxed">
-          {subsection.closingParagraph}
-        </p>
-      ) : null}
-    </div>
-  );
-}
-
 export function ContentSections({ sections }: { sections: ContentSection[] }) {
   return (
     <>
-      {sections.map((section, index) => {
+      {flattenSections(sections).map((section, index) => {
         const reversed = index % 2 === 1;
         const hasImage = Boolean(section.image);
 
@@ -158,13 +119,18 @@ export function ContentSections({ sections }: { sections: ContentSection[] }) {
               </div>
             ) : null}
 
+            {section.steps ? <StepList steps={section.steps} /> : null}
+
             {section.items ? <ItemGrid items={section.items} /> : null}
 
-            {section.closingParagraph ? (
-              <p className="text-muted-foreground leading-relaxed">
-                {section.closingParagraph}
+            {[section.closingParagraph ?? []].flat().map((paragraph) => (
+              <p
+                key={paragraph}
+                className="text-muted-foreground leading-relaxed"
+              >
+                {paragraph}
               </p>
-            ) : null}
+            ))}
 
             {section.note ? (
               <div className="border-primary/30 bg-primary/5 flex items-start gap-3 rounded-xl border px-4 py-3.5">
@@ -177,14 +143,6 @@ export function ContentSections({ sections }: { sections: ContentSection[] }) {
                 </p>
               </div>
             ) : null}
-
-            {section.subsections?.map((subsection) => (
-              <Subsection
-                key={subsection.title}
-                subsection={subsection}
-                wide={!hasImage}
-              />
-            ))}
           </FadeIn>
         );
 

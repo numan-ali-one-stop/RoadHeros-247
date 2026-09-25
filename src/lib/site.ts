@@ -67,6 +67,7 @@ export const services: ServiceSummary[] = [
     name: "Jump Start",
     shortDescription: "Flat battery? We'll get your engine running again.",
     icon: BatteryCharging,
+    href: "/car-jump-start-manchester",
   },
   {
     slug: "locking-nut-removal",
