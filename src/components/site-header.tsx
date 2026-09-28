@@ -8,6 +8,7 @@ import { cn } from "cn";
 
 import { Container } from "@/components/layout/container";
 import { MobileNav } from "@/components/mobile-nav";
+import { ServiceAreaMenu } from "@/components/service-area-menu";
 import { ServicesMenu } from "@/components/services-menu";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -53,6 +54,9 @@ export function SiteHeader() {
           {navLinks.map((link) => {
             if (link.label === "Services") {
               return <ServicesMenu key={link.href} />;
+            }
+            if (link.label === "Service Area") {
+              return <ServiceAreaMenu key={link.href} />;
             }
 
             const active = isRouteActive(pathname, link.href);

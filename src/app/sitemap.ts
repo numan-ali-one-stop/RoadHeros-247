@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 
+import { serviceAreas } from "@/lib/service-areas";
 import { services, siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -19,5 +20,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: service.href ? 0.9 : 0.8,
   }));
 
-  return [...staticRoutes, ...serviceRoutes];
+  const areaRoutes: MetadataRoute.Sitemap = serviceAreas.flatMap((area) =>
+    area.href
+      ? [{ url: `${siteConfig.url}${area.href}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 }]
+      : [],
+  );
+
+  return [...staticRoutes, ...serviceRoutes, ...areaRoutes];
 }

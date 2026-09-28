@@ -11,6 +11,7 @@ type CtaBandProps = {
   subtitle?: string | string[];
   points?: string[];
   primaryCta?: { label: string; href: string };
+  showCallButton?: boolean;
 };
 
 export function CtaBand({
@@ -18,6 +19,7 @@ export function CtaBand({
   subtitle = "Call our 24/7 line for an instant quote, or book online in under two minutes.",
   points,
   primaryCta,
+  showCallButton = true,
 }: CtaBandProps) {
   const paragraphs = Array.isArray(subtitle) ? subtitle : [subtitle];
 
@@ -65,14 +67,16 @@ export function CtaBand({
                   <Button size="lg" render={<Link href={primaryCta.href} />}>
                     {primaryCta.label}
                   </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    render={<a href={siteConfig.phoneHref} />}
-                  >
-                    <Phone className="size-4" aria-hidden="true" />
-                    Call {siteConfig.phone}
-                  </Button>
+                  {showCallButton ? (
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      render={<a href={siteConfig.phoneHref} />}
+                    >
+                      <Phone className="size-4" aria-hidden="true" />
+                      Call {siteConfig.phone}
+                    </Button>
+                  ) : null}
                 </>
               ) : (
                 <>

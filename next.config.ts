@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/services/locking-nut-removal",
+        destination: "/locking-wheel-nut-removal-manchester",
+        permanent: true,
+      },
+      {
         source: "/services/jump-start",
         destination: "/car-jump-start-manchester",
         permanent: true,

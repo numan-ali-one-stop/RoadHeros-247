@@ -12,7 +12,7 @@ export type LandingHeroButton = {
 };
 
 export type LandingHeroProps = {
-  badge: string;
+  badge?: string;
   title: string;
   paragraphs: string[];
   points: string[];
@@ -42,10 +42,12 @@ export function LandingHero({
       />
       <Container className="relative flex flex-col items-start gap-8">
         <FadeIn className="flex flex-col gap-6">
-          <span className="bg-foreground/10 text-foreground/80 ring-foreground/15 inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium ring-1">
-            <span className="bg-primary size-1.5 animate-pulse rounded-full" />
-            {badge}
-          </span>
+          {badge ? (
+            <span className="bg-foreground/10 text-foreground/80 ring-foreground/15 inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium ring-1">
+              <span className="bg-primary size-1.5 animate-pulse rounded-full" />
+              {badge}
+            </span>
+          ) : null}
           <h1 className="text-foreground max-w-3xl font-heading text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
             {title}
           </h1>

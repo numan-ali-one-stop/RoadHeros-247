@@ -35,6 +35,7 @@ export const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Service Area", href: "/service-area" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -74,12 +75,9 @@ export const services: ServiceSummary[] = [
     name: "Locking Nut Removal",
     shortDescription: "Lost the key or a seized nut? We'll remove it safely.",
     icon: KeyRound,
+    href: "/locking-wheel-nut-removal-manchester",
   },
 ];
-
-export function getServiceBySlug(slug: string): ServiceSummary | undefined {
-  return services.find((service) => service.slug === slug);
-}
 
 export const socialLinks = [
   { label: "Facebook", href: "https://facebook.com", icon: FacebookIcon },

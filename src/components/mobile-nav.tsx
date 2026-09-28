@@ -21,6 +21,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { serviceAreas } from "@/lib/service-areas";
 import { navLinks, services, siteConfig } from "@/lib/site";
 
 function isRouteActive(pathname: string, href: string) {
@@ -98,6 +99,69 @@ export function MobileNav() {
                           View all services
                         </SheetClose>
                       </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              );
+            }
+
+            if (link.label === "Service Area") {
+              const active = serviceAreas.some(
+                (area) =>
+                  area.href === pathname ||
+                  area.locations.some((location) => location.href === pathname),
+              );
+              return (
+                <Accordion key={link.href} className="w-full">
+                  <AccordionItem value="service-area" className="border-none">
+                    <AccordionTrigger
+                      className={cn(
+                        "rounded-lg px-3 py-2.5 text-base font-medium hover:no-underline",
+                        active && "text-primary",
+                      )}
+                    >
+                      Service Area
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-1 pl-1 [&_a]:no-underline">
+                      <Accordion className="w-full">
+                        {serviceAreas.map((area) => (
+                          <AccordionItem
+                            key={area.slug}
+                            value={area.slug}
+                            className="border-none"
+                          >
+                            <AccordionTrigger className="text-foreground/85 rounded-lg px-3 py-2 text-sm font-medium hover:no-underline">
+                              {area.name}
+                            </AccordionTrigger>
+                            <AccordionContent className="pb-1 pl-3">
+                              <div className="grid grid-cols-2 gap-0.5">
+                                {area.href && (
+                                  <SheetClose
+                                    render={<Link href={area.href} />}
+                                    className="text-primary col-span-2 rounded-lg px-3 py-1.5 text-sm font-medium"
+                                  >
+                                    View {area.name} page
+                                  </SheetClose>
+                                )}
+                                {area.locations.map((location) => (
+                                  <SheetClose
+                                    key={location.href}
+                                    render={<Link href={location.href} />}
+                                    className={cn(
+                                      "rounded-lg px-3 py-1.5 text-sm",
+                                      pathname === location.href
+                                        ? "bg-accent text-foreground"
+                                        : "text-muted-foreground hover:bg-accent hover:text-foreground",
+                                    )}
+                                  >
+                                    {location.name}
+                                  </SheetClose>
+                                ))}
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+                        ))}
+                      </Accordion>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
