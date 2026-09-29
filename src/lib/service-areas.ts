@@ -39,8 +39,8 @@ function group(
 
 export const serviceAreas: ServiceAreaGroup[] = [
   group("Bury", [
-    "Prestwich",
-    "Radcliffe",
+    { name: "Prestwich", href: "/prestwich/mobile-tyre-service" },
+    { name: "Radcliffe", href: "/radcliffe/mobile-tyre-service" },
     "Ramsbottom",
     "Tottington",
     "Whitefield",

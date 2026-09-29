@@ -20,11 +20,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: service.href ? 0.9 : 0.8,
   }));
 
-  const areaRoutes: MetadataRoute.Sitemap = serviceAreas.flatMap((area) =>
-    area.href
-      ? [{ url: `${siteConfig.url}${area.href}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 }]
-      : [],
-  );
+  // `/mobile-tyre-fitting-*` location links don't have pages yet, so only built area pages are listed.
+  const areaRoutes: MetadataRoute.Sitemap = serviceAreas
+    .flatMap((area) => [area.href, ...area.locations.map((location) => location.href)])
+    .filter((href): href is string => !!href && !href.startsWith("/mobile-tyre-fitting-"))
+    .map((href) => ({
+      url: `${siteConfig.url}${href}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    }));
 
   return [...staticRoutes, ...serviceRoutes, ...areaRoutes];
 }

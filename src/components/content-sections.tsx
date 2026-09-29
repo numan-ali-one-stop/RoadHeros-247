@@ -123,6 +123,47 @@ export function ContentSections({ sections }: { sections: ContentSection[] }) {
 
             {section.items ? <ItemGrid items={section.items} /> : null}
 
+            {section.subsections ? (
+              <div
+                className={cn(
+                  "grid grid-cols-1 gap-4",
+                  section.subsections.length > 1 && "sm:grid-cols-2",
+                )}
+              >
+                {section.subsections.map((subsection) => (
+                  <div
+                    key={subsection.title}
+                    className="border-border bg-card flex flex-col gap-3 rounded-2xl border p-5"
+                  >
+                    <h3 className="font-heading text-lg font-semibold tracking-tight">
+                      {subsection.title}
+                    </h3>
+                    {subsection.paragraphs?.map((paragraph) => (
+                      <p
+                        key={paragraph}
+                        className="text-muted-foreground text-sm leading-relaxed"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                    {subsection.bullets ? (
+                      <ul className="flex flex-col gap-2.5">
+                        {subsection.bullets.map((bullet) => (
+                          <li key={bullet} className="flex items-start gap-2.5 text-sm">
+                            <CheckCircle2
+                              className="text-primary mt-0.5 size-4 shrink-0"
+                              aria-hidden="true"
+                            />
+                            <span className="text-foreground/85">{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            ) : null}
+
             {[section.closingParagraph ?? []].flat().map((paragraph) => (
               <p
                 key={paragraph}

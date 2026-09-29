@@ -25,6 +25,8 @@ export type ContentSection = {
   closingParagraph?: string | string[];
   note?: string;
   subsections?: ContentSubsection[];
+  /** Renders `subsections` inside this section instead of splitting each into a section of its own. */
+  inlineSubsections?: boolean;
   image?: { src: string; alt: string };
 };
 
@@ -38,6 +40,8 @@ function slugify(text: string): string {
 /** Turns every subsection into a section of its own, placed straight after its parent. */
 export function flattenSections(sections: ContentSection[]): ContentSection[] {
   return sections.flatMap((section) => {
+    if (section.inlineSubsections) return [section];
+
     const { subsections, ...parent } = section;
     if (!subsections) return [parent];
 
