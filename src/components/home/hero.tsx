@@ -23,7 +23,7 @@ export function Hero() {
       />
       <div
         aria-hidden="true"
-        className="bg-teal-500/10 pointer-events-none absolute bottom-0 left-0 size-96 -translate-x-1/3 translate-y-1/3 rounded-full blur-3xl"
+        className="bg-brand-300/30 pointer-events-none absolute bottom-0 left-0 size-96 -translate-x-1/3 translate-y-1/3 rounded-full blur-3xl"
       />
       <div
         aria-hidden="true"
@@ -31,13 +31,13 @@ export function Hero() {
       />
       <Container className="relative flex flex-col items-start gap-8">
         <FadeIn className="flex flex-col gap-6">
-          <span className="bg-foreground/10 text-foreground/80 ring-foreground/15 inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium ring-1">
+          <span className="bg-card text-foreground/80 ring-brand-500/25 shadow-sm inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium ring-1">
             <span className="bg-primary size-1.5 animate-pulse rounded-full" />
             Mobile tyre fitters covering Manchester, 24/7
           </span>
           <h1 className="text-foreground max-w-3xl font-heading text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
             Mobile Tyre Service Manchester{" "}
-            <span className="text-foreground/50">| Road Heroes 24/7</span>
+            <span className="text-gradient-brand">| Road Heroes 24/7</span>
           </h1>
           <p className="text-foreground/70 max-w-xl text-lg text-balance">
             Reliable mobile tyre fitting, repair and replacement across

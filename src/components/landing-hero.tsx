@@ -34,7 +34,7 @@ export function LandingHero({
       />
       <div
         aria-hidden="true"
-        className="bg-teal-500/10 pointer-events-none absolute bottom-0 left-0 size-96 -translate-x-1/3 translate-y-1/3 rounded-full blur-3xl"
+        className="bg-brand-300/30 pointer-events-none absolute bottom-0 left-0 size-96 -translate-x-1/3 translate-y-1/3 rounded-full blur-3xl"
       />
       <div
         aria-hidden="true"
@@ -43,7 +43,7 @@ export function LandingHero({
       <Container className="relative flex flex-col items-start gap-8">
         <FadeIn className="flex flex-col gap-6">
           {badge ? (
-            <span className="bg-foreground/10 text-foreground/80 ring-foreground/15 inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium ring-1">
+            <span className="bg-card text-foreground/80 ring-brand-500/25 shadow-sm inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium ring-1">
               <span className="bg-primary size-1.5 animate-pulse rounded-full" />
               {badge}
             </span>

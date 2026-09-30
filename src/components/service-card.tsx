@@ -6,9 +6,9 @@ import type { ServiceSummary } from "@/lib/site";
 
 export function ServiceCard({ service }: { service: ServiceSummary }) {
   return (
-    <Card className="group/service h-full transition-all hover:-translate-y-1 hover:shadow-lg">
+    <Card className="group/service h-full transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-500/10 hover:ring-brand-500/40">
       <CardContent className="flex h-full flex-col gap-4">
-        <div className="bg-primary/10 text-primary flex size-11 items-center justify-center rounded-xl">
+        <div className="icon-chip flex size-11 items-center justify-center rounded-xl">
           <service.icon className="size-5" aria-hidden="true" />
         </div>
         <div className="flex flex-1 flex-col gap-2">

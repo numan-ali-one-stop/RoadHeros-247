@@ -60,7 +60,7 @@ export function ServicesMenu() {
               render={<Link href={service.href ?? `/services/${service.slug}`} />}
               className="flex h-auto items-start gap-3 rounded-xl p-3"
             >
-              <span className="bg-primary/10 text-primary flex size-9 shrink-0 items-center justify-center rounded-lg">
+              <span className="icon-chip flex size-9 shrink-0 items-center justify-center rounded-lg">
                 <service.icon className="size-4.5" aria-hidden="true" />
               </span>
               <span className="flex flex-col gap-0.5">

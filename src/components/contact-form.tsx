@@ -125,7 +125,7 @@ export function ContactForm() {
       {isSubmitSuccessful && !errors.root ? (
         <div
           role="status"
-          className="border-primary/30 bg-primary/10 text-primary flex items-start gap-2 rounded-lg border px-3 py-2.5 text-sm"
+          className="border-primary/30 icon-chip flex items-start gap-2 rounded-lg border px-3 py-2.5 text-sm"
         >
           <CheckCircle2 className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
           Thanks — we&apos;ve got your message and will be in touch shortly.

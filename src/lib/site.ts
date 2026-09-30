@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { BatteryCharging, Car, Home, KeyRound, Truck } from "lucide-react";
+import { BatteryCharging, Home, KeyRound, Truck } from "lucide-react";
 
 import {
   FacebookIcon,
@@ -19,9 +19,9 @@ export const siteConfig = {
   description:
     "24/7 mobile tyre service across Manchester. Mobile tyre fitting, emergency tyre replacement and roadside tyre assistance — we come to you, day or night.",
   url: normalizeUrl(process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL),
-  phone: "0800 555 0124",
-  phoneHref: "tel:+448005550124",
-  email: "help@roadheroes247.co.uk",
+  phone: "07856 392141",
+  phoneHref: "tel:+447856392141",
+  email: "Roadheroes247@gmail.com",
   address: "Unit 4, Foundry Business Park, Manchester, M1 2AB",
   hours: "Callouts available 24 hours a day, 7 days a week",
 } as const;
@@ -85,4 +85,3 @@ export const socialLinks = [
   { label: "X (Twitter)", href: "https://x.com", icon: XIcon },
 ] as const;
 
-export const brandIcon: LucideIcon = Car;

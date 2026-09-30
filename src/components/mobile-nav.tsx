@@ -12,6 +12,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -49,7 +50,9 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent side="right" className="flex w-full flex-col sm:max-w-sm">
         <SheetHeader className="border-border border-b">
-          <SheetTitle>{siteConfig.name}</SheetTitle>
+          <SheetTitle>
+            <Logo className="h-10" />
+          </SheetTitle>
         </SheetHeader>
         <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-2">
           {navLinks.map((link) => {

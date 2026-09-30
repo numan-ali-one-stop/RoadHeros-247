@@ -37,7 +37,7 @@ export function PageHero({
       <Container className="relative">
         <FadeIn className="flex max-w-2xl flex-col gap-4">
           {eyebrow ? (
-            <span className="text-primary text-xs font-semibold tracking-[0.18em] uppercase">
+            <span className="eyebrow">
               {eyebrow}
             </span>
           ) : null}

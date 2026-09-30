@@ -19,9 +19,9 @@ export function OurServices() {
             key={service.title}
             delay={index * 0.08}
             fullWidth
-            className="border-border bg-card flex h-full flex-col gap-4 rounded-2xl border p-6"
+            className="border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-500/40 hover:shadow-lg hover:shadow-brand-500/10 flex h-full flex-col gap-4 rounded-2xl border p-6"
           >
-            <div className="bg-primary/10 text-primary flex size-11 items-center justify-center rounded-xl">
+            <div className="icon-chip flex size-11 items-center justify-center rounded-xl">
               <service.icon className="size-5" aria-hidden="true" />
             </div>
             <h3 className="font-heading text-lg font-semibold tracking-tight">

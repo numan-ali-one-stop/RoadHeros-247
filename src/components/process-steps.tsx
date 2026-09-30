@@ -8,9 +8,9 @@ export function ProcessSteps({ steps }: { steps: ProcessStep[] }) {
         <FadeIn
           key={step.title}
           delay={index * 0.08}
-          className="relative flex flex-col gap-2 rounded-2xl border border-border bg-card p-6"
+          className="relative flex flex-col gap-2 rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-500/40 hover:shadow-lg hover:shadow-brand-500/10"
         >
-          <span className="font-heading text-primary/40 text-4xl font-bold">
+          <span className="font-heading text-brand-400 text-4xl font-bold">
             {String(index + 1).padStart(2, "0")}
           </span>
           <h3 className="font-heading text-base font-semibold tracking-tight">

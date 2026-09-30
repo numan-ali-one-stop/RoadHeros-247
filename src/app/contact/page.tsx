@@ -73,7 +73,7 @@ export default function ContactPage() {
               {contactDetails.map((detail) => {
                 const content = (
                   <div className="flex items-start gap-3">
-                    <span className="bg-primary/10 text-primary flex size-10 shrink-0 items-center justify-center rounded-lg">
+                    <span className="icon-chip flex size-10 shrink-0 items-center justify-center rounded-lg">
                       <detail.icon className="size-4.5" aria-hidden="true" />
                     </span>
                     <div>

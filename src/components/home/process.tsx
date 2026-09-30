@@ -1,3 +1,4 @@
+import { ContactDetails } from "@/components/contact-details";
 import { Section } from "@/components/layout/section";
 import { ProcessSteps } from "@/components/process-steps";
 import { SectionHeading } from "@/components/section-heading";
@@ -13,6 +14,7 @@ export function Process() {
         className="mb-12"
       />
       <ProcessSteps steps={homeProcessSteps} />
+      <ContactDetails className="text-foreground mt-10 justify-center" />
     </Section>
   );
 }

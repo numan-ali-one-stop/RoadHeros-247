@@ -75,7 +75,7 @@ export const serviceAreas: ServiceAreaGroup[] = [
     "Lostock",
     "Smithills",
     "Tonge Moor",
-  ]),
+  ], "/bolton/mobile-tyre-service"),
   group("Manchester", [
     "Blackley",
     "Cheetham Hill",

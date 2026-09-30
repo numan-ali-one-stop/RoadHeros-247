@@ -11,8 +11,8 @@ import { MobileNav } from "@/components/mobile-nav";
 import { ServiceAreaMenu } from "@/components/service-area-menu";
 import { ServicesMenu } from "@/components/services-menu";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { brandIcon as BrandIcon, navLinks, siteConfig } from "@/lib/site";
+import { Logo } from "@/components/logo";
+import { navLinks, siteConfig } from "@/lib/site";
 
 function isRouteActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -40,14 +40,8 @@ export function SiteHeader() {
       )}
     >
       <Container className="flex h-16 items-center justify-between gap-4 lg:h-18">
-        <Link
-          href="/"
-          className="text-foreground flex shrink-0 items-center gap-2 text-base font-semibold tracking-tight"
-        >
-          <span className="bg-primary/10 flex size-9 items-center justify-center rounded-full">
-            <BrandIcon className="text-primary size-4.5" aria-hidden="true" />
-          </span>
-          <span className="font-heading">{siteConfig.name}</span>
+        <Link href="/" className="flex shrink-0 items-center" aria-label={`${siteConfig.name} home`}>
+          <Logo priority className="h-11 lg:h-13" />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -76,9 +70,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-1.5 sm:gap-2">
-          <div className="text-foreground">
-            <ThemeToggle />
-          </div>
           <Button
             render={<a href={siteConfig.phoneHref} />}
             size="sm"

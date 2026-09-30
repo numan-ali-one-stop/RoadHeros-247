@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { ContactDetails } from "@/components/contact-details";
 import { FadeIn } from "@/components/motion/fade-in";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/section-heading";
@@ -40,6 +41,7 @@ export function AreasCovered() {
           with your location and tyre requirements to check service
           availability.
         </p>
+        <ContactDetails className="text-foreground justify-center" />
       </FadeIn>
     </Section>
   );

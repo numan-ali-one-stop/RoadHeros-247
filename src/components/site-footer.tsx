@@ -2,7 +2,8 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 import { Container } from "@/components/layout/container";
-import { brandIcon as BrandIcon, siteConfig, socialLinks } from "@/lib/site";
+import { Logo } from "@/components/logo";
+import { siteConfig, socialLinks } from "@/lib/site";
 
 const companyLinks = [
   { label: "About us", href: "/about" },
@@ -29,16 +30,11 @@ const footerServiceLinks = [
 
 export function SiteFooter() {
   return (
-    <footer className="bg-secondary text-secondary-foreground border-border border-t">
+    <footer className="theme-ink bg-secondary text-secondary-foreground relative border-t-4 border-t-brand-400">
       <Container className="grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] lg:py-16">
         <div className="flex flex-col gap-4">
-          <Link href="/" className="text-secondary-foreground flex items-center gap-2">
-            <span className="bg-primary/20 flex size-9 items-center justify-center rounded-full">
-              <BrandIcon className="text-primary size-4.5" aria-hidden="true" />
-            </span>
-            <span className="font-heading text-base font-semibold tracking-tight">
-              {siteConfig.name}
-            </span>
+          <Link href="/" className="flex w-fit items-center rounded-xl bg-white px-3 py-2" aria-label={`${siteConfig.name} home`}>
+            <Logo className="h-12" />
           </Link>
           <p className="text-secondary-foreground/60 max-w-xs text-sm">
             Professional mobile tyre assistance across Manchester.

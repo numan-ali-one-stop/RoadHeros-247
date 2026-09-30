@@ -2,6 +2,7 @@ import { AlertTriangle, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import { cn } from "cn";
 
+import { ContactDetails, mentionsContact } from "@/components/contact-details";
 import { FadeIn } from "@/components/motion/fade-in";
 import { Section } from "@/components/layout/section";
 import { flattenSections } from "@/lib/content-sections";
@@ -39,7 +40,7 @@ function StepList({ steps }: { steps: ContentStep[] }) {
     <ol className="flex flex-col gap-4">
       {steps.map((step, index) => (
         <li key={step.title} className="flex items-start gap-3.5">
-          <span className="bg-primary/10 text-primary flex size-8 shrink-0 items-center justify-center rounded-full text-sm font-semibold">
+          <span className="icon-chip flex size-8 shrink-0 items-center justify-center rounded-full text-sm font-semibold">
             {index + 1}
           </span>
           <div className="flex flex-col gap-1">
@@ -62,7 +63,7 @@ function ItemGrid({ items }: { items: ContentStep[] }) {
       {items.map((item) => (
         <li
           key={item.title}
-          className="border-border bg-card flex flex-col gap-1.5 rounded-2xl border p-5"
+          className="border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-500/40 hover:shadow-lg hover:shadow-brand-500/10 flex flex-col gap-1.5 rounded-2xl border p-5"
         >
           <h4 className="font-heading text-base font-semibold tracking-tight">
             {item.title}
@@ -82,6 +83,20 @@ export function ContentSections({ sections }: { sections: ContentSection[] }) {
       {flattenSections(sections).map((section, index) => {
         const reversed = index % 2 === 1;
         const hasImage = Boolean(section.image);
+        const showContact = mentionsContact(
+          ...section.paragraphs,
+          section.listIntro,
+          ...(section.bullets ?? []),
+          ...[...(section.steps ?? []), ...(section.items ?? [])].flatMap(
+            (entry) => [entry.title, entry.description],
+          ),
+          ...[section.closingParagraph ?? []].flat(),
+          section.note,
+          ...(section.subsections ?? []).flatMap((subsection) => [
+            ...(subsection.paragraphs ?? []),
+            ...(subsection.bullets ?? []),
+          ]),
+        );
 
         const content = (
           <FadeIn
@@ -90,7 +105,7 @@ export function ContentSections({ sections }: { sections: ContentSection[] }) {
               hasImage && reversed && "lg:order-2",
             )}
           >
-            <span className="text-primary text-xs font-semibold tracking-[0.18em] uppercase">
+            <span className="eyebrow">
               {section.eyebrow}
             </span>
             <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
@@ -133,7 +148,7 @@ export function ContentSections({ sections }: { sections: ContentSection[] }) {
                 {section.subsections.map((subsection) => (
                   <div
                     key={subsection.title}
-                    className="border-border bg-card flex flex-col gap-3 rounded-2xl border p-5"
+                    className="border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-500/40 hover:shadow-lg hover:shadow-brand-500/10 flex flex-col gap-3 rounded-2xl border p-5"
                   >
                     <h3 className="font-heading text-lg font-semibold tracking-tight">
                       {subsection.title}
@@ -184,6 +199,8 @@ export function ContentSections({ sections }: { sections: ContentSection[] }) {
                 </p>
               </div>
             ) : null}
+
+            {showContact ? <ContactDetails className="text-foreground" /> : null}
           </FadeIn>
         );
 

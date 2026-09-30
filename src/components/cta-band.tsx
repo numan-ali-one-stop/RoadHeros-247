@@ -1,6 +1,7 @@
 import { CheckCircle2, Phone } from "lucide-react";
 import Link from "next/link";
 
+import { ContactDetails } from "@/components/contact-details";
 import { FadeIn } from "@/components/motion/fade-in";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
@@ -26,7 +27,7 @@ export function CtaBand({
   return (
     <Section size="sm">
       <FadeIn>
-        <div className="bg-secondary bg-grid-pattern relative overflow-hidden rounded-3xl px-6 py-14 text-center sm:px-12 sm:py-16">
+        <div className="theme-ink bg-secondary bg-grid-pattern-ink relative overflow-hidden rounded-3xl shadow-xl shadow-charcoal-950/15 px-6 py-14 text-center sm:px-12 sm:py-16">
           <div
             aria-hidden="true"
             className="bg-primary/25 pointer-events-none absolute -bottom-20 left-1/2 size-72 -translate-x-1/2 rounded-full blur-3xl"
@@ -94,6 +95,7 @@ export function CtaBand({
                 </>
               )}
             </div>
+            <ContactDetails className="text-secondary-foreground justify-center" />
           </div>
         </div>
       </FadeIn>

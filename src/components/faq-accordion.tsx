@@ -1,3 +1,4 @@
+import { ContactDetails, mentionsContact } from "@/components/contact-details";
 import {
   Accordion,
   AccordionContent,
@@ -8,7 +9,7 @@ import type { Faq } from "@/lib/services";
 
 export function FaqAccordion({ faqs }: { faqs: Faq[] }) {
   return (
-    <Accordion className="border-border divide-border divide-y rounded-2xl border">
+    <Accordion className="border-border divide-border bg-card divide-y rounded-2xl border shadow-sm">
       {faqs.map((faq, index) => (
         <AccordionItem
           key={faq.question}
@@ -19,7 +20,10 @@ export function FaqAccordion({ faqs }: { faqs: Faq[] }) {
             {faq.question}
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground text-sm leading-relaxed">
-            {faq.answer}
+            <p>{faq.answer}</p>
+            {mentionsContact(faq.answer) ? (
+              <ContactDetails className="text-foreground mt-3" />
+            ) : null}
           </AccordionContent>
         </AccordionItem>
       ))}

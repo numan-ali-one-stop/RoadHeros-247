@@ -20,7 +20,7 @@ export function WhereWeWork() {
           <FadeIn
             key={borough.name}
             delay={index * 0.05}
-            className="border-border bg-card flex flex-col gap-1.5 rounded-2xl border p-5"
+            className="border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-500/40 hover:shadow-lg hover:shadow-brand-500/10 flex flex-col gap-1.5 rounded-2xl border p-5"
           >
             <h3 className="font-heading text-base font-semibold tracking-tight">
               {borough.name}
