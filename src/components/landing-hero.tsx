@@ -1,6 +1,7 @@
 import { CheckCircle2, Phone } from "lucide-react";
 import Link from "next/link";
 
+import { ContactDetails, mentionsContact } from "@/components/contact-details";
 import { FadeIn } from "@/components/motion/fade-in";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
@@ -16,6 +17,8 @@ export type LandingHeroProps = {
   title: string;
   paragraphs: string[];
   points: string[];
+  /** Line shown under the points, e.g. a "contact us" prompt. */
+  closingLine?: string;
   buttons: LandingHeroButton[];
 };
 
@@ -24,10 +27,11 @@ export function LandingHero({
   title,
   paragraphs,
   points,
+  closingLine,
   buttons,
 }: LandingHeroProps) {
   return (
-    <section className="bg-grid-pattern relative overflow-hidden bg-background pt-32 pb-20 sm:pt-44 sm:pb-28">
+    <section className="bg-grid-pattern bg-background relative overflow-hidden pt-32 pb-20 sm:pt-44 sm:pb-28">
       <div
         aria-hidden="true"
         className="bg-primary/25 pointer-events-none absolute -top-32 -right-20 size-[32rem] rounded-full blur-3xl"
@@ -38,17 +42,17 @@ export function LandingHero({
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background"
+        className="to-background pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent"
       />
       <Container className="relative flex flex-col items-start gap-8">
         <FadeIn className="flex flex-col gap-6">
           {badge ? (
-            <span className="bg-card text-foreground/80 ring-brand-500/25 shadow-sm inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium ring-1">
+            <span className="bg-card text-foreground/80 ring-brand-500/25 inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium shadow-sm ring-1">
               <span className="bg-primary size-1.5 animate-pulse rounded-full" />
               {badge}
             </span>
           ) : null}
-          <h1 className="text-foreground max-w-3xl font-heading text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+          <h1 className="text-foreground font-heading max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
             {title}
           </h1>
           {paragraphs.map((paragraph, index) => (
@@ -83,28 +87,43 @@ export function LandingHero({
           ))}
         </FadeIn>
 
-        <FadeIn delay={0.16} className="flex flex-col gap-3 sm:flex-row">
-          {buttons.map((button) => {
-            const isTel = button.href.startsWith("tel:");
-            return (
-              <Button
-                key={button.label}
-                size="lg"
-                variant={button.variant ?? "default"}
-                render={
-                  isTel ? (
-                    <a href={button.href} />
-                  ) : (
-                    <Link href={button.href} />
-                  )
-                }
-              >
-                {isTel ? <Phone className="size-4" aria-hidden="true" /> : null}
-                {button.label}
-              </Button>
-            );
-          })}
-        </FadeIn>
+        {closingLine ? (
+          <FadeIn delay={0.12} className="flex flex-col gap-3">
+            <p className="text-foreground/70 max-w-xl text-balance">
+              {closingLine}
+            </p>
+            {mentionsContact(closingLine) ? (
+              <ContactDetails className="text-foreground" />
+            ) : null}
+          </FadeIn>
+        ) : null}
+
+        {buttons.length > 0 ? (
+          <FadeIn delay={0.16} className="flex flex-col gap-3 sm:flex-row">
+            {buttons.map((button) => {
+              const isTel = button.href.startsWith("tel:");
+              return (
+                <Button
+                  key={button.label}
+                  size="lg"
+                  variant={button.variant ?? "default"}
+                  render={
+                    isTel ? (
+                      <a href={button.href} />
+                    ) : (
+                      <Link href={button.href} />
+                    )
+                  }
+                >
+                  {isTel ? (
+                    <Phone className="size-4" aria-hidden="true" />
+                  ) : null}
+                  {button.label}
+                </Button>
+              );
+            })}
+          </FadeIn>
+        ) : null}
       </Container>
     </section>
   );

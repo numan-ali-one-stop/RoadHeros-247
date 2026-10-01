@@ -27,7 +27,7 @@ export function CtaBand({
   return (
     <Section size="sm">
       <FadeIn>
-        <div className="theme-ink bg-secondary bg-grid-pattern-ink relative overflow-hidden rounded-3xl shadow-xl shadow-charcoal-950/15 px-6 py-14 text-center sm:px-12 sm:py-16">
+        <div className="theme-ink bg-secondary bg-grid-pattern-ink shadow-charcoal-950/15 relative overflow-hidden rounded-3xl px-6 py-14 text-center shadow-xl sm:px-12 sm:py-16">
           <div
             aria-hidden="true"
             className="bg-primary/25 pointer-events-none absolute -bottom-20 left-1/2 size-72 -translate-x-1/2 rounded-full blur-3xl"
@@ -62,39 +62,44 @@ export function CtaBand({
                 ))}
               </ul>
             ) : null}
-            <div className="flex flex-col gap-3 sm:flex-row">
-              {primaryCta ? (
-                <>
-                  <Button size="lg" render={<Link href={primaryCta.href} />}>
-                    {primaryCta.label}
-                  </Button>
-                  {showCallButton ? (
+            {primaryCta || showCallButton ? (
+              <div className="flex flex-col gap-3 sm:flex-row">
+                {primaryCta ? (
+                  <>
+                    <Button size="lg" render={<Link href={primaryCta.href} />}>
+                      {primaryCta.label}
+                    </Button>
+                    {showCallButton ? (
+                      <Button
+                        size="lg"
+                        variant="outline"
+                        render={<a href={siteConfig.phoneHref} />}
+                      >
+                        <Phone className="size-4" aria-hidden="true" />
+                        Call {siteConfig.phone}
+                      </Button>
+                    ) : null}
+                  </>
+                ) : (
+                  <>
                     <Button
                       size="lg"
-                      variant="outline"
                       render={<a href={siteConfig.phoneHref} />}
                     >
                       <Phone className="size-4" aria-hidden="true" />
                       Call {siteConfig.phone}
                     </Button>
-                  ) : null}
-                </>
-              ) : (
-                <>
-                  <Button size="lg" render={<a href={siteConfig.phoneHref} />}>
-                    <Phone className="size-4" aria-hidden="true" />
-                    Call {siteConfig.phone}
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    render={<Link href="/contact" />}
-                  >
-                    Get a free quote
-                  </Button>
-                </>
-              )}
-            </div>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      render={<Link href="/contact" />}
+                    >
+                      Get a free quote
+                    </Button>
+                  </>
+                )}
+              </div>
+            ) : null}
             <ContactDetails className="text-secondary-foreground justify-center" />
           </div>
         </div>

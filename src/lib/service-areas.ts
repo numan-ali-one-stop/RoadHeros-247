@@ -58,8 +58,8 @@ export const serviceAreas: ServiceAreaGroup[] = [
   ], "/bury/mobile-tyre-service"),
   group("Bolton", [
     "Blackrod",
-    "Farnworth",
-    "Horwich",
+    { name: "Farnworth", href: "/farnworth/mobile-tyre-service" },
+    { name: "Horwich", href: "/horwich/mobile-tyre-service" },
     "Kearsley",
     "Little Lever",
     "South Turton",
