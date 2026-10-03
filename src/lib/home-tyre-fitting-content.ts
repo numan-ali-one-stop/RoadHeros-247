@@ -33,8 +33,8 @@ export const homeTyreFittingSections: ContentSection[] = [
       "The technician comes to you with the equipment needed for the job, making tyre replacement much more convenient for busy Manchester drivers.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 home tyre fitting in Manchester",
+      src: "/images/tyre-fitting-house-driveway.jpg",
+      alt: "SUV raised on a jack on a house driveway for tyre fitting",
     },
   },
   {
@@ -48,8 +48,8 @@ export const homeTyreFittingSections: ContentSection[] = [
       "The idea is simple. Your tyres need attention, but your entire day does not need to change because of it.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1667321096364-8de621a90ee3?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — car parked on a driveway outside a house",
+      src: "/images/suv-tyre-change-driveway.jpg",
+      alt: "SUV on a trolley jack outside a house during a tyre change",
     },
   },
   {
@@ -184,8 +184,8 @@ export const homeTyreFittingSections: ContentSection[] = [
       },
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1763377278900-0ce8242c5005?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 emergency home tyre fitting in Manchester",
+      src: "/images/night-callout-driveway.jpg",
+      alt: "Car on a jack on a residential driveway during a late-night callout",
     },
   },
   {
@@ -215,8 +215,8 @@ export const homeTyreFittingSections: ContentSection[] = [
       },
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1608479746923-7e17632a9799?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 same day home tyre fitting in Manchester",
+      src: "/images/tyre-fitting-home-patio.jpg",
+      alt: "Hatchback raised on a trolley jack on a home patio",
     },
   },
   {
@@ -453,15 +453,17 @@ export const homeTyreFittingSections: ContentSection[] = [
     closingParagraph:
       "The technician will need sufficient space around the vehicle to complete the fitting safely.",
     image: {
-      src: "https://images.unsplash.com/photo-1780594774174-01b48ac0ac8b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — vehicle parked on a private driveway ready for mobile tyre fitting",
+      src: "/images/tyre-change-home-driveway.jpg",
+      alt: "Saloon car on a trolley jack with its rear wheel removed on a home driveway",
     },
   },
   {
     id: "prepare-for-home-tyre-fitting-appointment",
     eyebrow: "Preparation",
     title: "How To Prepare For Your Home Tyre Fitting Appointment",
-    paragraphs: ["A little preparation can help your appointment run smoothly."],
+    paragraphs: [
+      "A little preparation can help your appointment run smoothly.",
+    ],
     items: [
       {
         title: "Keep Your Vehicle Accessible",
@@ -537,8 +539,8 @@ export const homeTyreFittingSections: ContentSection[] = [
       "The aim is to complete the replacement properly so your vehicle is ready for everyday use.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1599082267768-4815b2ea6bd2?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — technician checking a tyre with professional tools",
+      src: "/images/rear-wheel-removed-street.jpg",
+      alt: "Hatchback with its rear wheel removed while parked on a street",
     },
   },
   {

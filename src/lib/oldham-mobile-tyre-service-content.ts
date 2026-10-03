@@ -32,8 +32,8 @@ export const oldhamMobileTyreServiceSections: ContentSection[] = [
       "Whether you need a new tyre fitted at home, have experienced a puncture or are searching for Tyre Fitting Near Me Oldham, Road Heroes 24/7 provides a convenient way to arrange mobile tyre assistance.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1601411101851-ea0e07766235?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 mobile tyre service in Oldham",
+      src: "/images/front-wheel-removed-street.jpg",
+      alt: "Car with its front wheel removed on a residential street, with jack and impact wrench",
     },
   },
   {
@@ -244,8 +244,8 @@ export const oldhamMobileTyreServiceSections: ContentSection[] = [
       "Road Heroes 24/7 provides Emergency Tyre Service Oldham to help customers arrange mobile tyre assistance when they experience an unexpected tyre issue.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1543251158-a7f162d29d0b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 emergency tyre service in Oldham",
+      src: "/images/night-tyre-change-car-park.jpg",
+      alt: "Car with its front wheel removed in a car park at night",
     },
     subsections: [
       {
@@ -294,8 +294,8 @@ export const oldhamMobileTyreServiceSections: ContentSection[] = [
       },
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1780594774174-01b48ac0ac8b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — vehicle parked at home ready for mobile tyre service in Oldham",
+      src: "/images/tyre-fitting-house-driveway.jpg",
+      alt: "SUV raised on a jack on a house driveway for tyre fitting",
     },
   },
   {
@@ -521,8 +521,8 @@ export const oldhamMobileTyreServiceSections: ContentSection[] = [
       "Location and vehicle accessibility can also affect the overall service time.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1599082267768-4815b2ea6bd2?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — technician checking a tyre with professional tools",
+      src: "/images/rear-wheel-removed-street.jpg",
+      alt: "Hatchback with its rear wheel removed while parked on a street",
     },
   },
   {

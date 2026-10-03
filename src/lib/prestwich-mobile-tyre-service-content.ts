@@ -31,8 +31,8 @@ export const prestwichMobileTyreServiceSections: ContentSection[] = [
       "Whether you need one replacement tyre or urgent help with a puncture, our mobile service is designed to make getting back on the road easier.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1601411101851-ea0e07766235?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 mobile tyre service in Prestwich",
+      src: "/images/front-wheel-removed-street.jpg",
+      alt: "Car with its front wheel removed on a residential street, with jack and impact wrench",
     },
   },
   {
@@ -78,7 +78,9 @@ export const prestwichMobileTyreServiceSections: ContentSection[] = [
     inlineSubsections: true,
     eyebrow: "What's Included",
     title: "What Does Our Mobile Tyre Service Prestwich Include?",
-    paragraphs: ["Our mobile tyre service covers several common tyre requirements."],
+    paragraphs: [
+      "Our mobile tyre service covers several common tyre requirements.",
+    ],
     subsections: [
       {
         title: "Mobile Tyre Fitting Prestwich",
@@ -131,11 +133,14 @@ export const prestwichMobileTyreServiceSections: ContentSection[] = [
     id: "how-does-mobile-tyre-fitting-prestwich-work",
     eyebrow: "How It Works",
     title: "How Does Mobile Tyre Fitting Prestwich Work?",
-    paragraphs: ["The process is simple and designed around your vehicle and location."],
+    paragraphs: [
+      "The process is simple and designed around your vehicle and location.",
+    ],
     steps: [
       {
         title: "Step One: Contact Road Heroes 24/7",
-        description: "Tell us that you need mobile tyre assistance in Prestwich.",
+        description:
+          "Tell us that you need mobile tyre assistance in Prestwich.",
       },
       {
         title: "Step Two: Provide Your Vehicle Details",
@@ -245,8 +250,8 @@ export const prestwichMobileTyreServiceSections: ContentSection[] = [
       "If you have a flat or damaged tyre, contact us and explain your location and vehicle problem.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1543251158-a7f162d29d0b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 emergency tyre service in Prestwich",
+      src: "/images/night-tyre-change-car-park.jpg",
+      alt: "Car with its front wheel removed in a car park at night",
     },
     subsections: [
       {
@@ -298,8 +303,8 @@ export const prestwichMobileTyreServiceSections: ContentSection[] = [
       },
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1780594774174-01b48ac0ac8b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — vehicle parked at home ready for mobile tyre service in Prestwich",
+      src: "/images/tyre-fitting-house-driveway.jpg",
+      alt: "SUV raised on a jack on a house driveway for tyre fitting",
     },
   },
   {
@@ -343,7 +348,8 @@ export const prestwichMobileTyreServiceSections: ContentSection[] = [
     items: [
       {
         title: "Flat Tyres",
-        description: "A completely flat tyre may require repair or replacement.",
+        description:
+          "A completely flat tyre may require repair or replacement.",
       },
       {
         title: "Punctures",
@@ -360,7 +366,8 @@ export const prestwichMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Low Tyre Pressure",
-        description: "Repeated pressure loss can indicate an underlying tyre problem.",
+        description:
+          "Repeated pressure loss can indicate an underlying tyre problem.",
       },
       {
         title: "Emergency Tyre Replacement",
@@ -392,7 +399,8 @@ export const prestwichMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Visible Damage",
-        description: "Cuts, bulges or other obvious damage should be inspected.",
+        description:
+          "Cuts, bulges or other obvious damage should be inspected.",
       },
       {
         title: "Repeated Air Loss",
@@ -404,7 +412,8 @@ export const prestwichMobileTyreServiceSections: ContentSection[] = [
   {
     id: "where-road-heroes-provides-mobile-tyre-service-prestwich",
     eyebrow: "Areas Covered",
-    title: "Where Does Road Heroes 24/7 Provide Mobile Tyre Service In Prestwich?",
+    title:
+      "Where Does Road Heroes 24/7 Provide Mobile Tyre Service In Prestwich?",
     paragraphs: [
       "Road Heroes 24/7 provides mobile tyre assistance across Prestwich and surrounding locations where safe access is available.",
     ],
@@ -518,8 +527,8 @@ export const prestwichMobileTyreServiceSections: ContentSection[] = [
       "Travel time also depends on your location, traffic and current technician availability.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1599082267768-4815b2ea6bd2?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — technician checking a tyre with professional tools",
+      src: "/images/rear-wheel-removed-street.jpg",
+      alt: "Hatchback with its rear wheel removed while parked on a street",
     },
   },
   {
@@ -611,7 +620,8 @@ export const prestwichMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Clear Communication",
-        description: "We explain the service and requirements before work begins.",
+        description:
+          "We explain the service and requirements before work begins.",
       },
     ],
   },

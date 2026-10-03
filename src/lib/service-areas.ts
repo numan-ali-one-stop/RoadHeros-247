@@ -19,9 +19,16 @@ function slugify(value: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+const placeholderPrefix = "/mobile-tyre-fitting-";
+
+/** True when the link points at a page that has been built, not a `/mobile-tyre-fitting-*` placeholder. */
+export function hasPage(href: string | undefined): href is string {
+  return !!href && !href.startsWith(placeholderPrefix);
+}
+
 /** Builds a location link as `/mobile-tyre-fitting-{slug}`; pass `slug` when the name doesn't slugify cleanly. */
 function location(name: string, slug = slugify(name)): ServiceLocation {
-  return { name, href: `/mobile-tyre-fitting-${slug}` };
+  return { name, href: `${placeholderPrefix}${slug}` };
 }
 
 function group(
@@ -148,29 +155,33 @@ export const serviceAreas: ServiceAreaGroup[] = [
     ],
     "/oldham/mobile-tyre-service",
   ),
-  group("Rochdale", [
-    "Heywood",
-    "Littleborough",
-    "Middleton",
-    "Milnrow",
-    "Newhey",
-    "Wardle",
-    "Castleton",
-    "Whitworth",
-    "Bamford",
-    "Belfield",
-    "Crown Oil area/Heywood",
-    "Dearnley",
-    "Healey",
-    "Hurstead",
-    "Kirkholt",
-    "Norden",
-    "Shawclough",
-    "Smallbridge",
-    "Summit",
-    "Syke",
-    "Thrum Hall",
-  ]),
+  group(
+    "Rochdale",
+    [
+      "Heywood",
+      "Littleborough",
+      "Middleton",
+      "Milnrow",
+      "Newhey",
+      "Wardle",
+      "Castleton",
+      "Whitworth",
+      "Bamford",
+      "Belfield",
+      "Crown Oil area/Heywood",
+      "Dearnley",
+      "Healey",
+      "Hurstead",
+      "Kirkholt",
+      "Norden",
+      "Shawclough",
+      "Smallbridge",
+      "Summit",
+      "Syke",
+      "Thrum Hall",
+    ],
+    "/rochdale/mobile-tyre-service",
+  ),
   group("Salford", [
     "Cadishead",
     "Eccles",

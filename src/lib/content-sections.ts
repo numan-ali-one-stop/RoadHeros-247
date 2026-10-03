@@ -47,19 +47,17 @@ export function flattenSections(sections: ContentSection[]): ContentSection[] {
 
     return [
       parent,
-      ...subsections.map(
-        (subsection): ContentSection => ({
-          id: `${section.id}-${slugify(subsection.title)}`,
-          eyebrow: section.eyebrow,
-          title: subsection.title,
-          paragraphs: subsection.paragraphs ?? [],
-          listIntro: subsection.listIntro,
-          bullets: subsection.bullets,
-          steps: subsection.steps,
-          items: subsection.items,
-          closingParagraph: subsection.closingParagraph,
-        }),
-      ),
+      ...subsections.map((subsection): ContentSection => ({
+        id: `${section.id}-${slugify(subsection.title)}`,
+        eyebrow: section.eyebrow,
+        title: subsection.title,
+        paragraphs: subsection.paragraphs ?? [],
+        listIntro: subsection.listIntro,
+        bullets: subsection.bullets,
+        steps: subsection.steps,
+        items: subsection.items,
+        closingParagraph: subsection.closingParagraph,
+      })),
     ];
   });
 }

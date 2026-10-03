@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Original photos (contain GPS location data); the site uses the cleaned copies in public/images/
+/photo-originals/

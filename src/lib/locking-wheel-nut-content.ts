@@ -30,8 +30,8 @@ export const lockingWheelNutSections: ContentSection[] = [
       "Our technicians use appropriate removal methods based on the condition of the locking nut and wheel. The aim is to remove the locking nut carefully while avoiding unnecessary damage to the wheel.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1764015805414-df7de89d405b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — technician removing wheel nuts from a car wheel",
+      src: "/images/rear-wheel-removed-street.jpg",
+      alt: "Hatchback with its rear wheel removed while parked on a street",
     },
   },
   {
@@ -136,8 +136,8 @@ export const lockingWheelNutSections: ContentSection[] = [
       "Instead of attempting increasingly aggressive methods yourself, professional assistance can help reduce the risk of unnecessary damage to the wheel or surrounding components.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1647292882945-d5c839432d7e?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — flat tyre on a car needing wheel access",
+      src: "/images/front-wheel-removed-driveway.jpg",
+      alt: "Front wheel removed from a car on a driveway, with jack and tools beside it",
     },
   },
   {
@@ -222,8 +222,8 @@ export const lockingWheelNutSections: ContentSection[] = [
       "If you are stranded, move yourself and passengers to a safe location whenever possible. Do not work on the vehicle in a dangerous position close to moving traffic.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1543251158-a7f162d29d0b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — roadside at night for emergency wheel nut removal",
+      src: "/images/night-tyre-change-car-park.jpg",
+      alt: "Car with its front wheel removed in a car park at night",
     },
   },
   {
@@ -354,8 +354,8 @@ export const lockingWheelNutSections: ContentSection[] = [
       "Attempting aggressive removal without the correct tools can damage the wheel, nut or surrounding components. Professional assistance is recommended when the locking key is missing or the nut is badly damaged.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1599082267768-4815b2ea6bd2?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — technician using hand tools on a wheel",
+      src: "/images/tyre-change-home-driveway.jpg",
+      alt: "Saloon car on a trolley jack with its rear wheel removed on a home driveway",
     },
   },
   {
@@ -414,8 +414,8 @@ export const lockingWheelNutSections: ContentSection[] = [
       "Contact Road Heroes 24/7 and explain that the flat tyre cannot be removed because of a locking wheel nut.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1601411101851-ea0e07766235?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — car wheel with a locking nut",
+      src: "/images/wheel-change-car-park.jpg",
+      alt: "Estate car raised on a trolley jack in a car park during a wheel change",
     },
   },
   {
@@ -433,7 +433,8 @@ export const lockingWheelNutSections: ContentSection[] = [
       },
       {
         title: "Salford",
-        description: "Assistance for difficult and stuck wheel nuts in Salford.",
+        description:
+          "Assistance for difficult and stuck wheel nuts in Salford.",
       },
       {
         title: "Trafford",
@@ -746,7 +747,8 @@ export const lockingWheelNutFaqs: Faq[] = [
       "If the nut is completely seized, professional assessment is recommended. The removal method will depend on its condition and accessibility.",
   },
   {
-    question: "What Should I Do If I Have A Flat Tyre And Cannot Remove The Wheel?",
+    question:
+      "What Should I Do If I Have A Flat Tyre And Cannot Remove The Wheel?",
     answer:
       "Move to a safe location if possible, avoid working close to moving traffic and contact Road Heroes 24/7 for mobile assistance.",
   },

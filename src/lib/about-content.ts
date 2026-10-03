@@ -82,8 +82,8 @@ export const aboutSections: ContentSection[] = [
       "The work itself is straightforward. We come to your vehicle with the correct tyre already loaded, fit it, balance it, torque it and take the old one away. What people actually remember afterwards is not the tyre. It is that somebody answered the phone, gave them a straight price and turned up when they said they would.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 mobile fitter at work",
+      src: "/images/front-wheel-removed-street.jpg",
+      alt: "Car with its front wheel removed on a residential street, with jack and impact wrench",
     },
   },
   {
@@ -215,11 +215,13 @@ export const whereWeWork = {
   boroughs: [
     {
       name: "Bury",
-      towns: "Bury, Radcliffe, Whitefield, Prestwich, Ramsbottom and Tottington.",
+      towns:
+        "Bury, Radcliffe, Whitefield, Prestwich, Ramsbottom and Tottington.",
     },
     {
       name: "Bolton",
-      towns: "Bolton, Farnworth, Horwich, Westhoughton, Little Lever and Blackrod.",
+      towns:
+        "Bolton, Farnworth, Horwich, Westhoughton, Little Lever and Blackrod.",
     },
     {
       name: "Manchester",
@@ -228,7 +230,8 @@ export const whereWeWork = {
     },
     {
       name: "Oldham",
-      towns: "Oldham, Chadderton, Royton, Shaw, Failsworth, Saddleworth and Uppermill.",
+      towns:
+        "Oldham, Chadderton, Royton, Shaw, Failsworth, Saddleworth and Uppermill.",
     },
     {
       name: "Rochdale",
@@ -254,7 +257,8 @@ export const whereWeWork = {
     },
     {
       name: "Wigan",
-      towns: "Wigan, Leigh, Atherton, Hindley, Standish and Ashton in Makerfield.",
+      towns:
+        "Wigan, Leigh, Atherton, Hindley, Standish and Ashton in Makerfield.",
     },
   ] satisfies Borough[],
   motorwaysTitle: "Motorways And Roads Covered",
@@ -308,7 +312,8 @@ export type AboutTestimonial = {
 };
 
 export const aboutTestimonialsTitle = "What Our Customers Say";
-export const aboutTestimonialsSubtitle = "Feedback From Across Greater Manchester";
+export const aboutTestimonialsSubtitle =
+  "Feedback From Across Greater Manchester";
 
 export const aboutTestimonials: AboutTestimonial[] = [
   {
@@ -349,7 +354,8 @@ export const leaveReviewNote = {
     "If we have looked after you, a review on Google helps the next local driver know exactly who to ring at three in the morning.",
 };
 
-export const aboutFaqsTitle = "Frequently Asked Questions About Road Heroes 24/7";
+export const aboutFaqsTitle =
+  "Frequently Asked Questions About Road Heroes 24/7";
 
 export const aboutFaqs: Faq[] = [
   {

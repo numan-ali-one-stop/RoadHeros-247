@@ -8,19 +8,28 @@ import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site";
 
 type CtaBandProps = {
+  /** Small line shown above the title. */
+  eyebrow?: string;
   title?: string;
   subtitle?: string | string[];
   points?: string[];
   primaryCta?: { label: string; href: string };
   showCallButton?: boolean;
+  /** Label for the call button; defaults to "Call {phone}". */
+  callLabel?: string;
+  /** Second button when there is no primaryCta; defaults to "Get a free quote". */
+  secondaryCta?: { label: string; href: string };
 };
 
 export function CtaBand({
+  eyebrow,
   title = "Stuck right now? We're already on our way.",
   subtitle = "Call our 24/7 line for an instant quote, or book online in under two minutes.",
   points,
   primaryCta,
   showCallButton = true,
+  callLabel = `Call ${siteConfig.phone}`,
+  secondaryCta = { label: "Get a free quote", href: "/contact" },
 }: CtaBandProps) {
   const paragraphs = Array.isArray(subtitle) ? subtitle : [subtitle];
 
@@ -33,6 +42,11 @@ export function CtaBand({
             className="bg-primary/25 pointer-events-none absolute -bottom-20 left-1/2 size-72 -translate-x-1/2 rounded-full blur-3xl"
           />
           <div className="relative mx-auto flex max-w-2xl flex-col items-center gap-6">
+            {eyebrow ? (
+              <p className="text-primary text-sm font-semibold tracking-wide uppercase">
+                {eyebrow}
+              </p>
+            ) : null}
             <h2 className="text-secondary-foreground font-heading text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
               {title}
             </h2>
@@ -76,7 +90,7 @@ export function CtaBand({
                         render={<a href={siteConfig.phoneHref} />}
                       >
                         <Phone className="size-4" aria-hidden="true" />
-                        Call {siteConfig.phone}
+                        {callLabel}
                       </Button>
                     ) : null}
                   </>
@@ -87,14 +101,14 @@ export function CtaBand({
                       render={<a href={siteConfig.phoneHref} />}
                     >
                       <Phone className="size-4" aria-hidden="true" />
-                      Call {siteConfig.phone}
+                      {callLabel}
                     </Button>
                     <Button
                       size="lg"
                       variant="outline"
-                      render={<Link href="/contact" />}
+                      render={<Link href={secondaryCta.href} />}
                     >
-                      Get a free quote
+                      {secondaryCta.label}
                     </Button>
                   </>
                 )}

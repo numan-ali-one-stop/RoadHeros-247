@@ -3,8 +3,9 @@ import type { Faq } from "@/lib/services";
 import { serviceAreas } from "@/lib/service-areas";
 
 const buryLocations =
-  serviceAreas.find((area) => area.slug === "bury")?.locations.map((location) => location.name) ??
-  [];
+  serviceAreas
+    .find((area) => area.slug === "bury")
+    ?.locations.map((location) => location.name) ?? [];
 
 export const buryMobileTyreServiceHero = {
   title: "Mobile Tyre Service Bury | Road Heroes 24/7",
@@ -36,8 +37,8 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
       "Whether you need a single replacement tyre or urgent help with a damaged tyre, our service is designed to make the process easier.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1601411101851-ea0e07766235?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 mobile tyre service in Bury",
+      src: "/images/front-wheel-removed-street.jpg",
+      alt: "Car with its front wheel removed on a residential street, with jack and impact wrench",
     },
   },
   {
@@ -82,7 +83,9 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
     id: "what-does-mobile-tyre-service-bury-include",
     eyebrow: "What's Included",
     title: "What Does Our Mobile Tyre Service Bury Include?",
-    paragraphs: ["Our mobile service can cover several common tyre requirements."],
+    paragraphs: [
+      "Our mobile service can cover several common tyre requirements.",
+    ],
     subsections: [
       {
         title: "Mobile Tyre Fitting Bury",
@@ -163,7 +166,8 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Step Six: Mobile Technician Arrives",
-        description: "The technician travels to your location and assesses the tyre.",
+        description:
+          "The technician travels to your location and assesses the tyre.",
       },
       {
         title: "Step Seven: Tyre Service Is Completed",
@@ -193,7 +197,8 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Damaged Tyre",
-        description: "Visible damage should be assessed before continuing to drive.",
+        description:
+          "Visible damage should be assessed before continuing to drive.",
       },
       {
         title: "Unexpected Flat Tyre",
@@ -248,8 +253,8 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
       "If you have a flat tyre, damaged tyre or sudden tyre problem, contact us and explain your situation.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1543251158-a7f162d29d0b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 emergency tyre service in Bury",
+      src: "/images/night-tyre-change-car-park.jpg",
+      alt: "Car with its front wheel removed in a car park at night",
     },
     subsections: [
       {
@@ -312,8 +317,8 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
       "This means you may be able to have the tyre issue addressed without arranging separate transport for your vehicle.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1780594774174-01b48ac0ac8b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — vehicle parked ready for mobile tyre service in Bury",
+      src: "/images/tyre-fitting-house-driveway.jpg",
+      alt: "SUV raised on a jack on a house driveway for tyre fitting",
     },
   },
   {
@@ -346,15 +351,18 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
     items: [
       {
         title: "Flat Tyres",
-        description: "A completely flat tyre may require repair or replacement.",
+        description:
+          "A completely flat tyre may require repair or replacement.",
       },
       {
         title: "Punctures",
-        description: "Some punctures can be safely repaired following inspection.",
+        description:
+          "Some punctures can be safely repaired following inspection.",
       },
       {
         title: "Damaged Tyres",
-        description: "Visible damage should be assessed before continuing to drive.",
+        description:
+          "Visible damage should be assessed before continuing to drive.",
       },
       {
         title: "Worn Tyres",
@@ -362,7 +370,8 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Low Tyre Pressure",
-        description: "Repeated pressure loss can indicate an underlying tyre problem.",
+        description:
+          "Repeated pressure loss can indicate an underlying tyre problem.",
       },
       {
         title: "Emergency Replacement",
@@ -394,11 +403,13 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Visible Damage",
-        description: "Cuts, bulges or other visible damage should not be ignored.",
+        description:
+          "Cuts, bulges or other visible damage should not be ignored.",
       },
       {
         title: "Repeated Pressure Loss",
-        description: "A tyre that repeatedly loses pressure should be inspected.",
+        description:
+          "A tyre that repeatedly loses pressure should be inspected.",
       },
     ],
   },
@@ -412,7 +423,8 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
     items: [
       {
         title: "Bury Town Centre",
-        description: "Mobile tyre assistance for drivers in and around central Bury.",
+        description:
+          "Mobile tyre assistance for drivers in and around central Bury.",
       },
       {
         title: "Elton",
@@ -429,15 +441,18 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Prestwich",
-        description: "Mobile tyre services for drivers in Prestwich and nearby areas.",
+        description:
+          "Mobile tyre services for drivers in Prestwich and nearby areas.",
       },
       {
         title: "Ramsbottom",
-        description: "Mobile tyre assistance for suitable locations around Ramsbottom.",
+        description:
+          "Mobile tyre assistance for suitable locations around Ramsbottom.",
       },
       {
         title: "Tottington",
-        description: "Tyre fitting and mobile tyre support for drivers in Tottington.",
+        description:
+          "Tyre fitting and mobile tyre support for drivers in Tottington.",
       },
       {
         title: "Summerseat",
@@ -518,8 +533,8 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
       "Travel time also depends on the technician location, traffic and current demand.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1599082267768-4815b2ea6bd2?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — technician checking a tyre with professional tools",
+      src: "/images/rear-wheel-removed-street.jpg",
+      alt: "Hatchback with its rear wheel removed while parked on a street",
     },
   },
   {
@@ -563,7 +578,8 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Avoid Ignoring Slow Punctures",
-        description: "A tyre that repeatedly loses pressure should be inspected.",
+        description:
+          "A tyre that repeatedly loses pressure should be inspected.",
       },
       {
         title: "Keep Your Tyres Maintained",
@@ -610,7 +626,8 @@ export const buryMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Clear Communication",
-        description: "We explain the service and requirements before work begins.",
+        description:
+          "We explain the service and requirements before work begins.",
       },
     ],
   },

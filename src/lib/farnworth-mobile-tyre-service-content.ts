@@ -32,8 +32,8 @@ export const farnworthMobileTyreServiceSections: ContentSection[] = [
       "Whether you need a tyre changed at home, require assistance with a flat tyre or need urgent tyre replacement, Road Heroes 24/7 can help you arrange a suitable mobile service in Farnworth.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1601411101851-ea0e07766235?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 mobile tyre service in Farnworth",
+      src: "/images/front-wheel-removed-street.jpg",
+      alt: "Car with its front wheel removed on a residential street, with jack and impact wrench",
     },
   },
   {
@@ -243,8 +243,8 @@ export const farnworthMobileTyreServiceSections: ContentSection[] = [
       "Road Heroes 24/7 provides Emergency Tyre Service Farnworth to help customers arrange mobile tyre assistance when they experience an unexpected tyre problem.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1543251158-a7f162d29d0b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 emergency tyre service in Farnworth",
+      src: "/images/night-tyre-change-car-park.jpg",
+      alt: "Car with its front wheel removed in a car park at night",
     },
     subsections: [
       {
@@ -293,8 +293,8 @@ export const farnworthMobileTyreServiceSections: ContentSection[] = [
       },
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1780594774174-01b48ac0ac8b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — vehicle parked at home ready for mobile tyre service in Farnworth",
+      src: "/images/tyre-fitting-house-driveway.jpg",
+      alt: "SUV raised on a jack on a house driveway for tyre fitting",
     },
   },
   {
@@ -348,7 +348,8 @@ export const farnworthMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Worn Tyres",
-        description: "Excessively worn tyres may need replacement rather than repair.",
+        description:
+          "Excessively worn tyres may need replacement rather than repair.",
       },
       {
         title: "Low Tyre Pressure",
@@ -398,7 +399,8 @@ export const farnworthMobileTyreServiceSections: ContentSection[] = [
   {
     id: "where-road-heroes-provides-mobile-tyre-service-farnworth",
     eyebrow: "Areas Covered",
-    title: "Where Does Road Heroes 24/7 Provide Mobile Tyre Service In Farnworth?",
+    title:
+      "Where Does Road Heroes 24/7 Provide Mobile Tyre Service In Farnworth?",
     paragraphs: [
       "Road Heroes 24/7 provides mobile tyre assistance around Farnworth and nearby areas, subject to location and service availability.",
     ],
@@ -514,8 +516,8 @@ export const farnworthMobileTyreServiceSections: ContentSection[] = [
       "The service time can also be affected by the location and accessibility of the vehicle.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1599082267768-4815b2ea6bd2?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — technician checking a tyre with professional tools",
+      src: "/images/rear-wheel-removed-street.jpg",
+      alt: "Hatchback with its rear wheel removed while parked on a street",
     },
   },
   {
@@ -550,7 +552,8 @@ export const farnworthMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Inspect Your Tyres",
-        description: "Look for visible cuts, cracks, bulges or other signs of damage.",
+        description:
+          "Look for visible cuts, cracks, bulges or other signs of damage.",
       },
       {
         title: "Check Tread Condition",

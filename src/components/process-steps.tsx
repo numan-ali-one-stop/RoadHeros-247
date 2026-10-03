@@ -3,12 +3,12 @@ import type { ProcessStep } from "@/lib/services";
 
 export function ProcessSteps({ steps }: { steps: ProcessStep[] }) {
   return (
-    <ol className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+    <ol className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {steps.map((step, index) => (
         <FadeIn
           key={step.title}
           delay={index * 0.08}
-          className="relative flex flex-col gap-2 rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-500/40 hover:shadow-lg hover:shadow-brand-500/10"
+          className="border-border bg-card hover:border-brand-500/40 hover:shadow-brand-500/10 relative flex flex-col gap-2 rounded-2xl border p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
         >
           <span className="font-heading text-brand-400 text-4xl font-bold">
             {String(index + 1).padStart(2, "0")}

@@ -31,8 +31,8 @@ export const boltonMobileTyreServiceSections: ContentSection[] = [
       "Whether you need one replacement tyre or urgent help with a puncture, our mobile service is designed to make getting back on the road easier.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1601411101851-ea0e07766235?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 mobile tyre service in Bolton",
+      src: "/images/front-wheel-removed-street.jpg",
+      alt: "Car with its front wheel removed on a residential street, with jack and impact wrench",
     },
   },
   {
@@ -78,7 +78,9 @@ export const boltonMobileTyreServiceSections: ContentSection[] = [
     inlineSubsections: true,
     eyebrow: "What's Included",
     title: "What Does Our Mobile Tyre Service Bolton Include?",
-    paragraphs: ["Our mobile tyre service covers several common tyre requirements."],
+    paragraphs: [
+      "Our mobile tyre service covers several common tyre requirements.",
+    ],
     subsections: [
       {
         title: "Mobile Tyre Fitting Bolton",
@@ -131,7 +133,9 @@ export const boltonMobileTyreServiceSections: ContentSection[] = [
     id: "how-does-mobile-tyre-fitting-bolton-work",
     eyebrow: "How It Works",
     title: "How Does Mobile Tyre Fitting Bolton Work?",
-    paragraphs: ["The process is simple and designed around your vehicle and location."],
+    paragraphs: [
+      "The process is simple and designed around your vehicle and location.",
+    ],
     steps: [
       {
         title: "Step One: Contact Road Heroes 24/7",
@@ -245,8 +249,8 @@ export const boltonMobileTyreServiceSections: ContentSection[] = [
       "If you have a flat or damaged tyre, contact us and explain your location and vehicle problem.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1543251158-a7f162d29d0b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 emergency tyre service in Bolton",
+      src: "/images/night-tyre-change-car-park.jpg",
+      alt: "Car with its front wheel removed in a car park at night",
     },
     subsections: [
       {
@@ -298,8 +302,8 @@ export const boltonMobileTyreServiceSections: ContentSection[] = [
       },
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1780594774174-01b48ac0ac8b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — vehicle parked at home ready for mobile tyre service in Bolton",
+      src: "/images/tyre-fitting-house-driveway.jpg",
+      alt: "SUV raised on a jack on a house driveway for tyre fitting",
     },
   },
   {
@@ -343,7 +347,8 @@ export const boltonMobileTyreServiceSections: ContentSection[] = [
     items: [
       {
         title: "Flat Tyres",
-        description: "A completely flat tyre may require repair or replacement.",
+        description:
+          "A completely flat tyre may require repair or replacement.",
       },
       {
         title: "Punctures",
@@ -360,7 +365,8 @@ export const boltonMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Low Tyre Pressure",
-        description: "Repeated pressure loss can indicate an underlying tyre problem.",
+        description:
+          "Repeated pressure loss can indicate an underlying tyre problem.",
       },
       {
         title: "Emergency Tyre Replacement",
@@ -392,7 +398,8 @@ export const boltonMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Visible Damage",
-        description: "Cuts, bulges or other obvious damage should be inspected.",
+        description:
+          "Cuts, bulges or other obvious damage should be inspected.",
       },
       {
         title: "Repeated Air Loss",
@@ -411,7 +418,8 @@ export const boltonMobileTyreServiceSections: ContentSection[] = [
     items: [
       {
         title: "Bolton Town Centre",
-        description: "Mobile tyre assistance for drivers in and around central Bolton.",
+        description:
+          "Mobile tyre assistance for drivers in and around central Bolton.",
       },
       {
         title: "Farnworth",
@@ -420,15 +428,18 @@ export const boltonMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Horwich",
-        description: "Tyre assistance for drivers around Horwich and nearby areas.",
+        description:
+          "Tyre assistance for drivers around Horwich and nearby areas.",
       },
       {
         title: "Westhoughton",
-        description: "Mobile tyre support for suitable locations around Westhoughton.",
+        description:
+          "Mobile tyre support for suitable locations around Westhoughton.",
       },
       {
         title: "Little Lever",
-        description: "Mobile tyre fitting and replacement assistance around Little Lever.",
+        description:
+          "Mobile tyre fitting and replacement assistance around Little Lever.",
       },
       {
         title: "Breightmet",
@@ -436,11 +447,13 @@ export const boltonMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Bromley Cross",
-        description: "Mobile tyre support for suitable locations around Bromley Cross.",
+        description:
+          "Mobile tyre support for suitable locations around Bromley Cross.",
       },
       {
         title: "Great Lever",
-        description: "Mobile assistance for tyre related problems around Great Lever.",
+        description:
+          "Mobile assistance for tyre related problems around Great Lever.",
       },
       {
         title: "Kearsley",
@@ -522,8 +535,8 @@ export const boltonMobileTyreServiceSections: ContentSection[] = [
       "Travel time also depends on your location, traffic and current technician availability.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1599082267768-4815b2ea6bd2?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — technician checking a tyre with professional tools",
+      src: "/images/rear-wheel-removed-street.jpg",
+      alt: "Hatchback with its rear wheel removed while parked on a street",
     },
   },
   {
@@ -615,7 +628,8 @@ export const boltonMobileTyreServiceSections: ContentSection[] = [
       },
       {
         title: "Clear Communication",
-        description: "We explain the service and requirements before work begins.",
+        description:
+          "We explain the service and requirements before work begins.",
       },
     ],
   },

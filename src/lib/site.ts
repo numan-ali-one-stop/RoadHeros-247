@@ -22,6 +22,9 @@ export const siteConfig = {
   phone: "07856 392141",
   phoneHref: "tel:+447856392141",
   email: "Roadheroes247@gmail.com",
+  legalName: "Road Heroes 247 LTD",
+  /** Companies House number; shown in the footer once filled in. */
+  companyNumber: "",
   address: "Unit 4, Foundry Business Park, Manchester, M1 2AB",
   hours: "Callouts available 24 hours a day, 7 days a week",
 } as const;
@@ -84,4 +87,3 @@ export const socialLinks = [
   { label: "Instagram", href: "https://instagram.com", icon: InstagramIcon },
   { label: "X (Twitter)", href: "https://x.com", icon: XIcon },
 ] as const;
-

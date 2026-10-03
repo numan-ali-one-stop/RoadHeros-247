@@ -1,47 +1,44 @@
 import Link from "next/link";
 
-import { ContactDetails } from "@/components/contact-details";
+import { PlaceChips } from "@/components/home/place-chips";
 import { FadeIn } from "@/components/motion/fade-in";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/section-heading";
-import { Badge } from "@/components/ui/badge";
-import { areasCovered } from "@/lib/home-landing";
+import { Button } from "@/components/ui/button";
+import { homeCoverage } from "@/lib/home-landing";
+import { hasPage, serviceAreas } from "@/lib/service-areas";
+
+const places = homeCoverage.areas.map((name) => {
+  const href = serviceAreas.find((area) => area.name === name)?.href;
+  return { name, href: hasPage(href) ? href : undefined };
+});
 
 export function AreasCovered() {
   return (
     <Section className="bg-secondary/40">
       <SectionHeading
-        eyebrow={areasCovered.eyebrow}
-        title={areasCovered.title}
-        subtitle={areasCovered.intro}
+        eyebrow={homeCoverage.eyebrow}
+        title={homeCoverage.title}
+        subtitle={homeCoverage.intro}
         align="center"
         className="mb-10"
       />
 
       <FadeIn className="mx-auto flex max-w-4xl flex-col items-center gap-6">
-        <p className="text-foreground text-sm font-semibold">
-          {areasCovered.listIntro}
-        </p>
-        <div className="flex flex-wrap justify-center gap-2.5">
-          {areasCovered.areas.map((area) => (
-            <Badge
-              key={area}
-              variant="secondary"
-              className="h-auto px-3.5 py-1.5 text-sm font-medium"
-            >
-              {area}
-            </Badge>
-          ))}
-        </div>
+        <h3 className="font-heading text-lg font-semibold tracking-tight">
+          {homeCoverage.listTitle}
+        </h3>
+        <PlaceChips places={places} />
         <p className="text-muted-foreground max-w-2xl text-center leading-relaxed">
-          If you are outside these areas,{" "}
-          <Link href="/contact" className="text-primary font-medium underline-offset-4 hover:underline">
-            contact Road Heroes 24/7
-          </Link>{" "}
-          with your location and tyre requirements to check service
-          availability.
+          {homeCoverage.closing}
         </p>
-        <ContactDetails className="text-foreground justify-center" />
+        <Button
+          size="lg"
+          className="w-full sm:w-auto"
+          render={<Link href="/contact" />}
+        >
+          {homeCoverage.cta}
+        </Button>
       </FadeIn>
     </Section>
   );

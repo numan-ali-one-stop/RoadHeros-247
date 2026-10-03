@@ -37,8 +37,8 @@ export const mobileTyreFittingSections: ContentSection[] = [
       "Local dispatch routing ensures rapid arrival times that bypass traditional garage wait times entirely.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1601411101851-ea0e07766235?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 mobile tyre fitting in Manchester",
+      src: "/images/front-wheel-removed-street.jpg",
+      alt: "Car with its front wheel removed on a residential street, with jack and impact wrench",
     },
   },
   {
@@ -71,8 +71,8 @@ export const mobileTyreFittingSections: ContentSection[] = [
       "Transparent billing practices prevent unexpected late night fee surges during stressful breakdown situations.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1543251158-a7f162d29d0b?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 24 hour emergency tyre fitting in Manchester",
+      src: "/images/night-tyre-change-car-park.jpg",
+      alt: "Car with its front wheel removed in a car park at night",
     },
   },
   {
@@ -105,8 +105,8 @@ export const mobileTyreFittingSections: ContentSection[] = [
       "Zero hidden callout charges or unexpected disposal fees apply to any of our affordable fitting quotes.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1689942007812-60baa6a66cf7?fm=jpg&q=80&w=1200&fit=crop",
-      alt: "Placeholder image — Road Heroes 24/7 cheap mobile tyre fitting in Manchester",
+      src: "/images/wheel-change-car-park.jpg",
+      alt: "Estate car raised on a trolley jack in a car park during a wheel change",
     },
   },
   {
@@ -140,17 +140,20 @@ export const mobileTyreFittingFaqs: Faq[] = [
       "Our average response time ranges between twenty and thirty minutes depending on traffic conditions and your exact distance from our nearest mobile fitting van.",
   },
   {
-    question: "What should I do if I need an emergency puncture repair at night?",
+    question:
+      "What should I do if I need an emergency puncture repair at night?",
     answer:
       "You can call our twenty four hour emergency line at any time of the night, and our dispatch team will send an on call fitter directly to your stranded vehicle.",
   },
   {
-    question: "How do I know if my tyre needs a replacement instead of a repair?",
+    question:
+      "How do I know if my tyre needs a replacement instead of a repair?",
     answer:
       "A technician must inspect the damage to confirm if the puncture is larger than six millimeters, located too close to the sidewall, or if the tyre was driven on while completely flat.",
   },
   {
-    question: "What details do I need to provide when booking a mobile fitting?",
+    question:
+      "What details do I need to provide when booking a mobile fitting?",
     answer:
       "You need to provide your exact vehicle location, your current registration number, and the specific tyre size printed on the sidewall of your existing tyre.",
   },
@@ -160,22 +163,26 @@ export const mobileTyreFittingFaqs: Faq[] = [
       "Pricing depends on your chosen tyre brand and your specific location, but all quotes remain completely transparent with zero hidden callout fees or unexpected surcharges.",
   },
   {
-    question: "Can mobile tyre technicians replace tyres on high performance luxury cars?",
+    question:
+      "Can mobile tyre technicians replace tyres on high performance luxury cars?",
     answer:
       "Our vans carry specialized low profile equipment and protective tools designed to handle luxury alloy rims and performance vehicles without causing any cosmetic damage.",
   },
   {
-    question: "Where can I find my correct tyre size before calling for assistance?",
+    question:
+      "Where can I find my correct tyre size before calling for assistance?",
     answer:
       "You can locate your exact tyre dimensions by reading the alphanumeric code printed clearly on the outer sidewall of your currently mounted wheel.",
   },
   {
-    question: "What payment methods do your mobile fitting technicians accept on site?",
+    question:
+      "What payment methods do your mobile fitting technicians accept on site?",
     answer:
       "Our technicians accept major credit cards, debit cards, and contactless mobile payments directly through portable card machines installed inside every service van.",
   },
   {
-    question: "Will my alloy wheels get scratched during the mobile tyre change process?",
+    question:
+      "Will my alloy wheels get scratched during the mobile tyre change process?",
     answer:
       "We use advanced protective mounting heads and professional clamping techniques to ensure your alloy rims remain completely pristine throughout the entire replacement procedure.",
   },
