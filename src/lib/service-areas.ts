@@ -158,7 +158,7 @@ export const serviceAreas: ServiceAreaGroup[] = [
   group(
     "Rochdale",
     [
-      "Heywood",
+      { name: "Heywood", href: "/heywood/mobile-tyre-service" },
       "Littleborough",
       "Middleton",
       "Milnrow",
