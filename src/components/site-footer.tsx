@@ -163,7 +163,7 @@ export function SiteFooter() {
       </Container>
 
       <div className="border-border border-t">
-        <Container className="text-secondary-foreground/55 flex flex-col items-center justify-between gap-3 py-6 text-center text-xs sm:flex-row sm:text-left">
+        <Container className="text-secondary-foreground/55 flex flex-col items-center justify-between gap-3 pt-6 pb-3 text-center text-xs sm:flex-row sm:text-left">
           <p>
             © {new Date().getFullYear()} {siteConfig.legalName}. All rights
             reserved.
@@ -172,6 +172,9 @@ export function SiteFooter() {
               : null}
           </p>
           <p>{siteConfig.hours}</p>
+        </Container>
+        <Container className="text-secondary-foreground/55 pb-6 text-center text-xs">
+          <p>This website is created and managed by Uptime Marketing.</p>
         </Container>
       </div>
     </footer>
